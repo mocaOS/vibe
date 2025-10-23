@@ -1,0 +1,20 @@
+{
+  "name": "vibe-studio",
+  "version": "1.0.0",
+  "description": "Community curated app store from the Museum of Crypto Art",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "start:8081": "node server.js"
+  },
+  "keywords": [
+    "moca",
+    "vibe-studio",
+    "app-store",
+    "community",
+    "generative-ai"
+  ],
+  "author": "Museum of Crypto Art",
+  "license": "MIT"
+}

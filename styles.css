@@ -1,0 +1,489 @@
+/* Monochromatic Dark Theme */
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #fff;
+  --bg-quaternary: #3a3a3a;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-tertiary: #999999;
+  --border-radius: 8px;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --transition: all 0.2s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.app-store {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  isolation: isolate; /* Create a new stacking context */
+}
+
+/* MOCA Logo */
+.moca-logo {
+  display: block;
+  margin: 1rem auto 1rem auto;
+  width: 10em;
+  height: auto;
+}
+
+.app-store h1 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+/* App Grid */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  position: relative; /* Add positioning context */
+}
+
+.app-card {
+  padding: 0.6rem;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: visible; /* Ensure tooltips aren't clipped */
+  isolation: isolate; /* Create a new stacking context for each card */
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+  z-index: 10; /* Increase z-index on hover to ensure it's above other cards */
+}
+
+.app-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  background-color: #000000;
+  border: 2px solid #fff;
+}
+
+.app-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+/* Tooltip for app descriptions */
+.app-card:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  width: 200px;
+  z-index: 1000;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
+  pointer-events: none;
+  white-space: normal;
+  word-wrap: break-word;
+  /* Remove will-change property that can cause blurry text */
+  /* Add properties to improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* Use transform3d for better rendering */
+  backface-visibility: hidden;
+  transform: translate3d(-50%, 10px, 0);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 5px 5px 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--bg-secondary) transparent;
+}
+
+/* Improve tooltip text rendering on hover */
+.app-card:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(-50%, 0, 0);
+}
+
+/* Filler Cards */
+.filler-card {
+  background-color: var(--bg-secondary);
+  opacity: 0.5;
+  cursor: default;
+  box-shadow: none;
+  z-index: 1; /* Ensure filler cards also have proper stacking */
+}
+
+.filler-card:hover {
+  transform: none;
+}
+
+.filler-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.filler-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 6px;
+  background-color: var(--bg-quaternary);
+  margin-bottom: 1rem;
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+.filler-title {
+  width: 80%;
+  height: 1.2rem;
+  background-color: var(--bg-quaternary);
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+.filler-description {
+  width: 60%;
+  height: 0.8rem;
+  background-color: var(--bg-quaternary);
+  border-radius: 4px;
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001; /* Increased from 1000 to ensure it's above tooltips */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  background-color: var(--bg-secondary);
+  margin: 5% auto;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  width: 1000px;
+  max-width: 80%;
+  box-shadow: var(--shadow);
+  position: relative;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.close {
+  color: var(--text-secondary);
+  float: right;
+  font-size: 1.8rem;
+  font-weight: normal;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-details {
+  margin-top: 1.5rem;
+}
+
+.app-details-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.app-details-icon {
+  width: 81px;
+  height: 81px;
+  border-radius: 14px;
+  object-fit: contain;
+  margin-right: 1.2rem;
+  background-color: #000000;
+}
+
+.app-details-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.app-details-author {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Launch button */
+.launch-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-left: auto;
+  height: fit-content;
+}
+
+.launch-button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+.app-long-description {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--text-tertiary);
+  color: var(--text-primary);
+}
+
+.app-long-description h2 {
+  margin: 1.2rem 0 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 1.3rem;
+}
+
+.app-long-description h3 {
+  margin: 1rem 0 0.6rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.app-long-description p {
+  margin-bottom: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.app-long-description ul,
+.app-long-description ol {
+  margin-left: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.app-long-description li {
+  margin-bottom: 0.4rem;
+  color: var(--text-secondary);
+}
+
+.app-long-description blockquote {
+  border-left: 2px solid var(--bg-tertiary);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+/* Style links in app descriptions */
+.app-long-description a {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.app-long-description a:hover {
+  color: var(--text-secondary);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+  padding: 1rem 0;
+}
+
+.pagination-button {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--bg-quaternary);
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.pagination-button:hover:not(.active) {
+  background-color: var(--bg-quaternary);
+}
+
+.pagination-button.active {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-ellipsis {
+  padding: 0.5rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-store {
+    padding: 1rem;
+  }
+  
+  /* MOCA Logo */
+  .moca-logo {
+    width: 6em;
+  }
+  
+  .app-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+  
+  .app-card {
+    padding: 1rem;
+  }
+  
+  .app-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .modal-content {
+    width: 95%;
+    padding: 1.2rem;
+  }
+  
+  .app-details-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .app-details-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .app-store h1 {
+    font-size: 1.7rem;
+  }
+  
+  /* Adjust tooltip for mobile */
+  .tooltip {
+    width: 150px;
+    font-size: 0.7rem;
+    bottom: -45px;
+    z-index: 1000;
+    /* Improve mobile text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    backface-visibility: hidden;
+  }
+  
+  /* Adjust launch button for mobile */
+  .launch-button {
+    margin: 1rem 0 0 0;
+    width: 100%;
+  }
+  
+  /* Adjust pagination for mobile */
+  .pagination {
+    flex-wrap: wrap;
+  }
+  
+  .pagination-button {
+    padding: 0.4rem 0.8rem;
+    margin: 0.1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* App titles on mobile */
+  .app-title,
+  .app-details-title {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
