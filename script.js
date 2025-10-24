@@ -4,25 +4,25 @@ function renderMarkdown(text) {
   text = text.replace(/^### (.*$)/gim, '<h3>$1</h3>');
   text = text.replace(/^## (.*$)/gim, '<h2>$1</h2>');
   text = text.replace(/^# (.*$)/gim, '<h1>$1</h1>');
-  
+
   // Convert markdown links [text](url) to HTML links
   text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" target="_blank">$1</a>');
-  
+
   // Convert bold and italic
   text = text.replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>');
   text = text.replace(/\*(.*?)\*/gim, '<em>$1</em>');
-  
+
   // Convert blockquotes
   text = text.replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>');
-  
+
   // Convert lists
   text = text.replace(/^\- (.*$)/gim, '<li>$1</li>');
   text = text.replace(/<\/li>\s<li>/gim, '</li><li>');
   text = text.replace(/(<li>.*<\/li>)/gim, '<ul>$1</ul>');
-  
+
   text = text.replace(/^\d+\. (.*$)/gim, '<li>$1</li>');
   text = text.replace(/(<li>.*<\/li>)/gim, '<ol>$1</ol>');
-  
+
   // Handle paragraphs (separated by double newlines)
   const paragraphs = text.split('\n\n');
   for (let i = 0; i < paragraphs.length; i++) {
@@ -37,11 +37,11 @@ function renderMarkdown(text) {
     }
   }
   text = paragraphs.join('');
-  
+
   // Clean up empty paragraphs
   text = text.replace(/<p><br><\/p>/g, '');
   text = text.replace(/<p><\/p>/g, '');
-  
+
   return text;
 }
 
@@ -53,7 +53,7 @@ let appsData = [];
 // Load apps and populate the grid
 document.addEventListener('DOMContentLoaded', function() {
   const appGrid = document.getElementById('appGrid');
-  
+
   // Fetch apps data from JSON file
   fetch('appsData.json')
     .then(response => response.json())
@@ -67,15 +67,15 @@ document.addEventListener('DOMContentLoaded', function() {
       // Fallback to showing an error message in the grid
       appGrid.innerHTML = '<p class="error-message">Failed to load applications data.</p>';
     });
-  
+
   // Modal functionality
   const modal = document.getElementById('detailsModal');
   const closeBtn = document.querySelector('.close');
-  
+
   closeBtn.addEventListener('click', () => {
     modal.style.display = 'none';
   });
-  
+
   window.addEventListener('click', (event) => {
     if (event.target === modal) {
       modal.style.display = 'none';
@@ -86,19 +86,19 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('keydown', (event) => {
     // Only handle keyboard events when modal is not open
     const isModalOpen = modal.style.display === 'block';
-    
+
     // Handle ESC key to close modal
     if (event.key === 'Escape' && isModalOpen) {
       modal.style.display = 'none';
       return;
     }
-    
+
     // Handle arrow keys for pagination only when modal is closed
     if (!isModalOpen) {
       // Prevent default behavior for arrow keys to avoid page scrolling
       if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
         event.preventDefault();
-        
+
         if (event.key === 'ArrowLeft' && currentPage > 1) {
           currentPage--;
           displayApps(currentPage);
@@ -119,25 +119,25 @@ function displayApps(page) {
   const startIndex = (page - 1) * APPS_PER_PAGE;
   const endIndex = startIndex + APPS_PER_PAGE;
   const appsToDisplay = appsData.slice(startIndex, endIndex);
-  
+
   appGrid.innerHTML = '';
-  
+
   // Add actual apps
   appsToDisplay.forEach(app => {
     const appCard = document.createElement('div');
     appCard.className = 'app-card';
     appCard.dataset.appId = app.id;
-    
+
     appCard.innerHTML = `
       <img src="${app.img}" alt="${app.title}" class="app-icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'80\\' height=\\'80\\' viewBox=\\'0 0 24 24\\'><rect width=\\'24\\' height=\\'24\\' fill=\\'%232a2a2a\\'/><path fill=\\'%23cccccc\\' d=\\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z\\'/></svg>'">
       <h3 class="app-title">${app.title}</h3>
       <div class="tooltip">${app.shortDescription}</div>
     `;
-    
+
     appCard.addEventListener('click', () => showAppDetails(app));
     appGrid.appendChild(appCard);
   });
-  
+
   // Add filler items to maintain consistent grid height
   const fillerCount = APPS_PER_PAGE - appsToDisplay.length;
   for (let i = 0; i < fillerCount; i++) {
@@ -158,9 +158,9 @@ function displayApps(page) {
 function setupPagination() {
   const pagination = document.getElementById('pagination');
   const pageCount = Math.ceil(appsData.length / APPS_PER_PAGE);
-  
+
   pagination.innerHTML = '';
-  
+
   // Previous button
   const prevButton = document.createElement('button');
   prevButton.className = 'pagination-button';
@@ -174,16 +174,16 @@ function setupPagination() {
     }
   });
   pagination.appendChild(prevButton);
-  
+
   // Page buttons
   const maxVisiblePages = 5;
   let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
   let endPage = Math.min(pageCount, startPage + maxVisiblePages - 1);
-  
+
   if (endPage - startPage + 1 < maxVisiblePages) {
     startPage = Math.max(1, endPage - maxVisiblePages + 1);
   }
-  
+
   // First page
   if (startPage > 1) {
     const firstButton = document.createElement('button');
@@ -195,7 +195,7 @@ function setupPagination() {
       setupPagination();
     });
     pagination.appendChild(firstButton);
-    
+
     if (startPage > 2) {
       const ellipsis = document.createElement('span');
       ellipsis.className = 'pagination-ellipsis';
@@ -203,7 +203,7 @@ function setupPagination() {
       pagination.appendChild(ellipsis);
     }
   }
-  
+
   // Page numbers
   for (let i = startPage; i <= endPage; i++) {
     const pageButton = document.createElement('button');
@@ -216,7 +216,7 @@ function setupPagination() {
     });
     pagination.appendChild(pageButton);
   }
-  
+
   // Last page
   if (endPage < pageCount) {
     if (endPage < pageCount - 1) {
@@ -225,7 +225,7 @@ function setupPagination() {
       ellipsis.innerHTML = '&hellip;';
       pagination.appendChild(ellipsis);
     }
-    
+
     const lastButton = document.createElement('button');
     lastButton.className = `pagination-button ${currentPage === pageCount ? 'active' : ''}`;
     lastButton.textContent = pageCount;
@@ -236,7 +236,7 @@ function setupPagination() {
     });
     pagination.appendChild(lastButton);
   }
-  
+
   // Next button
   const nextButton = document.createElement('button');
   nextButton.className = 'pagination-button';
@@ -255,7 +255,7 @@ function setupPagination() {
 // Show app details in modal
 function showAppDetails(app) {
   const appDetails = document.getElementById('appDetails');
-  
+
   appDetails.innerHTML = `
     <div class="app-details-header">
       <img src="${app.img}" alt="${app.title}" class="app-details-icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100\\' height=\\'100\\' viewBox=\\'0 0 24 24\\'><rect width=\\'24\\' height=\\'24\\' fill=\\'%232a2a2a\\'/><path fill=\\'%23cccccc\\' d=\\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z\\'/></svg>'">
@@ -269,9 +269,9 @@ function showAppDetails(app) {
       ${renderMarkdown(app.longDescription)}
     </div>
   `;
-  
+
   document.getElementById('detailsModal').style.display = 'block';
-  
+
   // Add event listener to launch button
   document.getElementById('launchButton').addEventListener('click', function() {
     // Check if the app has a URL

@@ -81,8 +81,8 @@ body {
 }
 
 .app-icon {
-  width: 70px;
-  height: 70px;
+  width: 120px;
+  height: 120px;
   border-radius: 12px;
   object-fit: contain;
   margin-bottom: 1rem;
@@ -410,45 +410,45 @@ body {
   .app-store {
     padding: 1rem;
   }
-  
+
   /* MOCA Logo */
   .moca-logo {
     width: 6em;
   }
-  
+
   .app-grid {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 1rem;
   }
-  
+
   .app-card {
     padding: 1rem;
   }
-  
+
   .app-icon {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
   }
-  
+
   .modal-content {
     width: 95%;
     padding: 1.2rem;
   }
-  
+
   .app-details-header {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .app-details-icon {
     margin-right: 0;
     margin-bottom: 1rem;
   }
-  
+
   .app-store h1 {
     font-size: 1.7rem;
   }
-  
+
   /* Adjust tooltip for mobile */
   .tooltip {
     width: 150px;
@@ -461,24 +461,24 @@ body {
     text-rendering: optimizeLegibility;
     backface-visibility: hidden;
   }
-  
+
   /* Adjust launch button for mobile */
   .launch-button {
     margin: 1rem 0 0 0;
     width: 100%;
   }
-  
+
   /* Adjust pagination for mobile */
   .pagination {
     flex-wrap: wrap;
   }
-  
+
   .pagination-button {
     padding: 0.4rem 0.8rem;
     margin: 0.1rem;
     font-size: 0.9rem;
   }
-  
+
   /* App titles on mobile */
   .app-title,
   .app-details-title {
