@@ -28,7 +28,7 @@ body {
 .app-store {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 0;
   isolation: isolate; /* Create a new stacking context */
 }
 
@@ -42,7 +42,7 @@ body {
 
 .app-store h1 {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   font-weight: 300;
   font-size: 1.5rem;
   color: var(--text-primary);
