@@ -46,7 +46,7 @@ function renderMarkdown(text) {
 }
 
 // Pagination variables
-const APPS_PER_PAGE = 16;
+const APPS_PER_PAGE = 12;
 let currentPage = 1;
 let appsData = [];
 
