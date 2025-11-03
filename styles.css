@@ -60,9 +60,9 @@ body {
 }
 
 .app-store {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0.5rem 0;
+  padding: 0.5rem 1.5rem;
   isolation: isolate; /* Create a new stacking context */
 }
 
@@ -113,10 +113,20 @@ body {
   color: #000000;
 }
 
+.type-filter-button.count-button {
+  border: 1px solid #666666;
+  cursor: default;
+}
+
+.type-filter-button.count-button:hover {
+  background-color: transparent;
+  transform: none;
+}
+
 /* App Grid */
 .app-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.2rem;
   margin-bottom: 2rem;
   position: relative; /* Add positioning context */
@@ -165,6 +175,27 @@ body {
   z-index: 2;
 }
 
+/* Play button */
+.play-button {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: #000000;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.app-card:hover .play-button {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 /* Tooltip for app descriptions */
 .app-card:hover .tooltip {
   visibility: visible;
@@ -198,6 +229,7 @@ body {
 /* Filler Cards */
 .filler-card {
   background-color: var(--bg-secondary);
+  border-color: #333333;
   opacity: 0.5;
   cursor: default;
   box-shadow: none;
@@ -213,13 +245,14 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding: 3.5rem 0;
 }
 
 .filler-icon {
   width: 110px;
   height: 110px;
   border-radius: 12px;
-  background-color: var(--bg-quaternary);
+  background-color: var(--bg-secondary);
   margin-bottom: 1rem;
   animation: pulse 1.5s ease-in-out infinite alternate;
 }
@@ -227,7 +260,7 @@ body {
 .filler-title {
   width: 80%;
   height: 1.2rem;
-  background-color: var(--bg-quaternary);
+  background-color: var(--bg-secondary);
   margin-bottom: 0.5rem;
   border-radius: 4px;
   animation: pulse 1.5s ease-in-out infinite alternate;
@@ -236,7 +269,7 @@ body {
 .filler-description {
   width: 60%;
   height: 0.8rem;
-  background-color: var(--bg-quaternary);
+  background-color: var(--bg-secondary);
   border-radius: 4px;
   animation: pulse 1.5s ease-in-out infinite alternate;
 }
@@ -444,6 +477,7 @@ body {
   color: var(--text-secondary);
 }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .app-store {
@@ -461,23 +495,17 @@ body {
     margin-bottom: 2rem;
   }
 
-  .type-filter-button {
-    padding: 0.4rem 1rem;
-    font-size: 0.85rem;
+  .app-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
   }
 
-  .app-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 1rem;
+  .filler-content {
+    padding: 2rem 0;
   }
 
   .app-card {
     padding: 1rem;
-  }
-
-  .app-icon {
-    width: 100px;
-    height: 100px;
   }
 
   .filler-icon {

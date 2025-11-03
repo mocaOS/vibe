@@ -12,7 +12,7 @@ function initMarquee() {
   }
 
   let position = 0;
-  const speed = 0.5; // pixels per frame
+  const speed = 0.3; // pixels per frame
 
   function animate() {
     position -= speed;
@@ -173,6 +173,13 @@ function displayTypeFilters() {
   const typeFilters = document.getElementById('typeFilters');
   typeFilters.innerHTML = '';
 
+  // Add count button first
+  const countButton = document.createElement('button');
+  countButton.className = 'type-filter-button count-button';
+  countButton.textContent = `${appsData.length} Apps`;
+  countButton.disabled = true;
+  typeFilters.appendChild(countButton);
+
   appsTypes.forEach(type => {
     const button = document.createElement('button');
     button.className = 'type-filter-button';
@@ -238,6 +245,7 @@ function displayApps(page) {
 
       <div class="tooltip">${app.shortDescription}</div>
       <h3 class="app-title">${app.title}</h3>
+      ${app.url && app.url.trim() !== '' ? `<a href="${app.url}" target="_blank" class="play-button" onclick="event.stopPropagation()">▶</a>` : ''}
     `;
 
     appCard.addEventListener('click', () => showAppDetails(app));
