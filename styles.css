@@ -191,19 +191,22 @@ body {
 }
 
 
-.app-card:hover .play-button {
+.app-card:hover .play-button,
+.app-card.active .play-button {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
 /* Tooltip for app descriptions */
-.app-card:hover .tooltip {
+.app-card:hover .tooltip,
+.app-card.active .tooltip {
   visibility: visible;
   opacity: 1;
 }
 
-.app-card:hover .app-title {
+.app-card:hover .app-title,
+.app-card.active .app-title {
   color: #000000;
   background: var(--app-title-color);
   border-radius: 0 0 calc(var(--border-radius) - 5px) calc(var(--border-radius) - 5px);

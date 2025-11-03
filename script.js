@@ -258,11 +258,32 @@ function displayApps(page) {
     const tooltip = appCard.querySelector('.tooltip');
     const tooltipText = appCard.querySelector('.tooltip-text');
 
+    // Mouse events for desktop
     appCard.addEventListener('mouseenter', () => {
       startTooltipScroll(tooltip, tooltipText, appCard);
     });
 
     appCard.addEventListener('mouseleave', () => {
+      stopTooltipScroll(tooltipText);
+    });
+
+    // Touch events for mobile
+    appCard.addEventListener('touchstart', (e) => {
+      // Add active class to show tooltip immediately
+      appCard.classList.add('active');
+      // Start scrolling immediately on touch
+      startTooltipScroll(tooltip, tooltipText, appCard);
+    }, { passive: true });
+
+    appCard.addEventListener('touchend', () => {
+      // Remove active class to hide tooltip
+      appCard.classList.remove('active');
+      stopTooltipScroll(tooltipText);
+    });
+
+    appCard.addEventListener('touchcancel', () => {
+      // Remove active class to hide tooltip
+      appCard.classList.remove('active');
       stopTooltipScroll(tooltipText);
     });
 
@@ -432,63 +453,69 @@ function startTooltipScroll(tooltip, tooltipText, appCard) {
   // Store current card
   currentAnimatedCard = appCard;
 
-  // Get dimensions
-  const tooltipHeight = tooltip.clientHeight;
-  const textHeight = tooltipText.scrollHeight;
+  // Use requestAnimationFrame to ensure tooltip is rendered before calculating dimensions
+  requestAnimationFrame(() => {
+    // Small additional delay to ensure CSS transition completes
+    setTimeout(() => {
+      // Get dimensions
+      const tooltipHeight = tooltip.clientHeight;
+      const textHeight = tooltipText.scrollHeight;
 
-  // Calculate if scrolling is needed
-  const scrollDistance = textHeight - tooltipHeight;
+      // Calculate if scrolling is needed
+      const scrollDistance = textHeight - tooltipHeight;
 
-  if (scrollDistance <= 0) {
-    // No scrolling needed, text fits
-    return;
-  }
-
-  // Animation parameters
-  const scrollSpeed = 20; // pixels per second (slower for better readability)
-  const scrollDuration = (scrollDistance / scrollSpeed) * 1000; // milliseconds
-  const pauseDuration = 1000; // 1 second pause
-
-  let animationState = {
-    timeout: null,
-    interval: null
-  };
-
-  function animateScroll() {
-    let startTime = Date.now();
-    let startPosition = 0;
-
-    // Scroll animation
-    animationState.interval = setInterval(() => {
-      const elapsed = Date.now() - startTime;
-      const progress = Math.min(elapsed / scrollDuration, 1);
-      const currentPosition = startPosition - (scrollDistance * progress);
-
-      tooltipText.style.transform = `translateY(${currentPosition}px)`;
-
-      if (progress >= 1) {
-        clearInterval(animationState.interval);
-
-        // Wait 1 second, then reset and wait 1 second, then start again
-        animationState.timeout = setTimeout(() => {
-          tooltipText.style.transform = 'translateY(0)';
-
-          animationState.timeout = setTimeout(() => {
-            // Check if we're still hovering the same card
-            if (currentAnimatedCard === appCard) {
-              animateScroll();
-            }
-          }, pauseDuration);
-        }, pauseDuration);
+      if (scrollDistance <= 0) {
+        // No scrolling needed, text fits
+        return;
       }
-    }, 50); // Update every 50ms for smooth animation
-  }
 
-  // Store animation state
-  activeTooltipAnimation = animationState;
+      // Animation parameters
+      const scrollSpeed = 20; // pixels per second (slower for better readability)
+      const scrollDuration = (scrollDistance / scrollSpeed) * 1000; // milliseconds
+      const pauseDuration = 1000; // 1 second pause
 
-  // Start the animation
-  animateScroll();
+      let animationState = {
+        timeout: null,
+        interval: null
+      };
+
+      function animateScroll() {
+        let startTime = Date.now();
+        let startPosition = 0;
+
+        // Scroll animation
+        animationState.interval = setInterval(() => {
+          const elapsed = Date.now() - startTime;
+          const progress = Math.min(elapsed / scrollDuration, 1);
+          const currentPosition = startPosition - (scrollDistance * progress);
+
+          tooltipText.style.transform = `translateY(${currentPosition}px)`;
+
+          if (progress >= 1) {
+            clearInterval(animationState.interval);
+
+            // Wait 1 second, then reset and wait 1 second, then start again
+            animationState.timeout = setTimeout(() => {
+              tooltipText.style.transform = 'translateY(0)';
+
+              animationState.timeout = setTimeout(() => {
+                // Check if we're still hovering the same card
+                if (currentAnimatedCard === appCard) {
+                  animateScroll();
+                }
+              }, pauseDuration);
+            }, pauseDuration);
+          }
+        }, 50); // Update every 50ms for smooth animation
+      }
+
+      // Store animation state
+      activeTooltipAnimation = animationState;
+
+      // Start the animation
+      animateScroll();
+    }, 100); // 100ms delay to ensure tooltip is fully visible
+  });
 }
 
 function stopTooltipScroll(tooltipText) {
