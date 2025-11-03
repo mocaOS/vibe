@@ -46,7 +46,7 @@
     "author": "Tor",
     "longDescription": "Our first Community App, developed and operated by Artscape, lets Art DeCC0 holders print any DeCC0 from their collection in stunning high-resolution. Simply connect your wallet holding an Art DeCC0, choose which you want to print, select paper type and size,  and your print will be produced and shipped from the nearest print hub to your location. About Artscape: Artscape provides high-quality fine art prints through token-gating. This enables artists, communities, and galleries to offer collectors authenticated physical versions of their digital artworks — including limited editions and signed originals.",
     "img": "imgs/print.png",
-    "url": "",
+    "url": "https://artscapeprint.com/moca",
     "type": "community"
   },
   {
