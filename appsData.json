@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Museum",
-    "shortDescription": "The OG Museum of Crypto Art: a portal to crypto art’s celebrated past and blossoming present. Built on our cutting-edge open-source tech stack, explore our Genesis Collection of crypto art minted before 2021, the largest decentralized art collection in existence in our Community Collection, the DaimAlYad collection of crypto art from around the world, the world’s foremost Matt Kane Collection of his 2023 Moral Performance, and more. Dig as deep as you like using our AI-powered Museum database, The Library,  trained on over 600 trusted documents about crypto art, NFTs, and web3 culture.",
+    "shortDescription": "The OG Museum of Crypto Art. Across five distinct collections, discover some of the most historically-significant, cutting-edge, creative crypto art ever created.",
     "author": "Museum Of Crypto Art",
     "longDescription": "The OG Museum of Crypto Art: a portal to crypto art’s celebrated past and blossoming present. Built on our cutting-edge open-source tech stack, explore our **Genesis Collection** of crypto art minted before 2021, the largest decentralized art collection in existence in our **Community Collection**, the **DaimAlYad collection** of crypto art from around the world, the world’s foremost **Matt Kane Collection** of his 2023 _Moral Performance,_ and more. Dig as deep as you like using our AI-powered Museum database, **The Library**, trained on over 600 trusted documents about crypto art, NFTs, and web3 culture.\n\n**If you want to deploy your own Museum, check our GitHub Repo:**\n\n [https://github.com/mocaOS/museum](https://github.com/mocaOS/museum)",
     "img": "imgs/museum.png",
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "title": "The Codex",
-    "shortDescription": "The most visually-diverse PFP collection in existence awaits. Explore the entire Art DeCC0s collection, search for your favorite traits, and across 100,000,000+ total words of description, discover every DeCC0s’s agentic personality: preferences, history, perspective, thought patterns, identity. Dive in and see how we’re literally bringing Art DeCC0s to life.",
+    "shortDescription": "Explore all 10,000 Art DeCC0s, from aesthetics to traits, from Agentic Personalities to entire identities. Dive in and see how we’re literally bringing Art DeCC0s to life.",
     "author": "Museum Of Crypto Art",
     "longDescription": "The most visually-diverse PFP collection in existence awaits. Explore the entire Art DeCC0s collection, search for your favorite traits, and across 100,000,000+ total words of description, discover every DeCC0s’s agentic personality: preferences, history, perspective, thought patterns, identity. Dive in and see how we’re literally bringing Art DeCC0s to life. ",
     "img": "imgs/codex.png",
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "title": "Adoption Center",
-    "shortDescription": "Find your perfect digital companion from the Art DeCC0s collection and bring them home. This isn't just about acquiring an NFT—it's about finding a partner for all your digital activity ahead. Browse through a rotating gallery of Art DeCC0s and chat with them for yourself. Discover their identities and personality traits, establish novel connections with Art DeCC0s AI Agents, and when you’ve found the right match, take your new best friend off the market. Go on, they won’t bite (even if you ask them to, weirdo).",
+    "shortDescription": "Interact with our Art DeCC0 Agents! Chat 1-on-1, ask questions, form genuine connections, and take your new digital best friend home, all in one place.",
     "author": "Museum Of Crypto Art",
     "longDescription": "Find your perfect digital companion from the Art DeCC0s collection and bring them home. This isn't just about acquiring an NFT—it's about finding a partner for all your digital activity ahead. Browse through a rotating gallery of Art DeCC0s and chat with them for yourself. Discover their identities and personality traits, establish novel connections with Art DeCC0s AI Agents, and when you’ve found the right match, take your new best friend off the market. Go on, they won’t bite (even if you ask them to, weirdo).",
     "img": "imgs/adoption.png",
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "title": "Rooms Archive",
-    "shortDescription": "Our ROOMs archive preserves the rich history of MOCA's virtual gallery spaces: how these immersive metaverse environments have changed and developed over time. Every ROOM in our archive has been meticulously crafted by leading artists, architects, and designers to create immersive experiences that showcase digital art in entirely new ways. With every ROOMs curation archived permanently on Filecoin, this unique scholarship tool allows anyone to see how each ROOM has transformed over time, the best way to witness the evolution of curatorial tactics and taste across the years.",
+    "shortDescription": "Discover MOCA ROOMs, our dozens of bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
     "author": "Museum Of Crypto Art",
     "longDescription": "Our ROOMs archive preserves the rich history of MOCA's virtual gallery spaces: how these immersive metaverse environments have changed and developed over time. Every ROOM in our archive has been meticulously crafted by leading artists, architects, and designers to create immersive experiences that showcase digital art in entirely new ways. With every **ROOMs curation** archived permanently on **Filecoin**, this unique scholarship tool allows anyone to see how each **ROOM** has transformed over time, the best way to witness the evolution of curatorial tactics and taste across the years.\n\n**Read the Full ROOMs Story here:**\n[https://museumofcrypto.substack.com/p/preserving-art-and-culture-the-imperative](https://museumofcrypto.substack.com/p/preserving-art-and-culture-the-imperative)",
     "img": "imgs/rooms.png",
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "title": "DeCC0 Printer",
-    "shortDescription": "Our first Community App, developed and operated by Artscape, lets Art DeCC0 holders print any DeCC0 from their collection in stunning high-resolution. Simply connect your wallet holding an Art DeCC0, choose which you want to print, select paper type and size,  and your print will be produced and shipped from the nearest print hub to your location. About Artscape: Artscape provides high-quality fine art prints through token-gating. This enables artists, communities, and galleries to offer collectors authenticated physical versions of their digital artworks — including limited editions and signed originals.",
+    "shortDescription": "Turn your Art DeCC0s into stunning high-resolution prints with the click of a button. Developed and operated by Artscape.",
     "author": "Tor",
     "longDescription": "Our first Community App, developed and operated by Artscape, lets Art DeCC0 holders print any DeCC0 from their collection in stunning high-resolution. Simply connect your wallet holding an Art DeCC0, choose which you want to print, select paper type and size,  and your print will be produced and shipped from the nearest print hub to your location. About Artscape: Artscape provides high-quality fine art prints through token-gating. This enables artists, communities, and galleries to offer collectors authenticated physical versions of their digital artworks — including limited editions and signed originals.",
     "img": "imgs/print.png",
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "title": "MOCA Substack",
-    "shortDescription": "Our living chronicle of the digital art movement, containing writings about crypto art, AI, the metaverse, cryptocurrency, and web3 culture. Sign-up to get essays, our MOCA Weekly Roundup of news from across the culture, and every MOCA announcement sent right to your inbox. Join nearly 1200 others in our ever-deepening rabbit hole.",
+    "shortDescription": "Industry-leading writing about crypto art, AI, the metaverse, cryptocurrency, and web3 culture, released weekly.",
     "author": "Museum Of Cryto Art",
     "longDescription": "Our living chronicle of the digital art movement, containing writings about crypto art, AI, the metaverse, cryptocurrency, and web3 culture. Sign-up to get essays, our **MOCA Weekly Roundup** of news from across the culture, and every MOCA announcement sent right to your inbox. Join nearly 1200 others in our ever-deepening rabbit hole.\n\nAnd find many more essays, from **CohentheWriter**, **Anubis3100**, **Julian Brangold**, and others, at [https://museumofcryptoart.medium.com](https://museumofcryptoart.medium.com).",
     "img": "imgs/substack.png",
