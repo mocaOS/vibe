@@ -95,6 +95,10 @@ let appsTypes = [];
 let activeFilters = new Set(); // Track active type filters
 let typeColorMap = {}; // Map slug to color
 
+// Tooltip scroll management
+let activeTooltipAnimation = null;
+let currentAnimatedCard = null;
+
 // Load apps and populate the grid
 document.addEventListener('DOMContentLoaded', function() {
   const appGrid = document.getElementById('appGrid');
@@ -243,10 +247,24 @@ function displayApps(page) {
     appCard.innerHTML = `
       <img src="${app.img}" alt="${app.title}" class="app-icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'80\\' height=\\'80\\' viewBox=\\'0 0 24 24\\'><rect width=\\'24\\' height=\\'24\\' fill=\\'%232a2a2a\\'/><path fill=\\'%23cccccc\\' d=\\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z\\'/></svg>'">
 
-      <div class="tooltip">${app.shortDescription}</div>
+      <div class="tooltip">
+        <div class="tooltip-text">${app.shortDescription}</div>
+      </div>
       <h3 class="app-title">${app.title}</h3>
       ${app.url && app.url.trim() !== '' ? `<a href="${app.url}" target="_blank" class="play-button" onclick="event.stopPropagation()">▶</a>` : ''}
     `;
+
+    // Add tooltip scroll animation on hover
+    const tooltip = appCard.querySelector('.tooltip');
+    const tooltipText = appCard.querySelector('.tooltip-text');
+
+    appCard.addEventListener('mouseenter', () => {
+      startTooltipScroll(tooltip, tooltipText, appCard);
+    });
+
+    appCard.addEventListener('mouseleave', () => {
+      stopTooltipScroll(tooltipText);
+    });
 
     appCard.addEventListener('click', () => showAppDetails(app));
     appGrid.appendChild(appCard);
@@ -398,4 +416,94 @@ function showAppDetails(app) {
       alert(`No URL available for ${app.title}.`);
     }
   });
+}
+
+// Tooltip scroll animation functions
+function startTooltipScroll(tooltip, tooltipText, appCard) {
+  // Stop any existing animation
+  if (activeTooltipAnimation) {
+    clearTimeout(activeTooltipAnimation.timeout);
+    clearInterval(activeTooltipAnimation.interval);
+  }
+
+  // Reset position
+  tooltipText.style.transform = 'translateY(0)';
+
+  // Store current card
+  currentAnimatedCard = appCard;
+
+  // Get dimensions
+  const tooltipHeight = tooltip.clientHeight;
+  const textHeight = tooltipText.scrollHeight;
+
+  // Calculate if scrolling is needed
+  const scrollDistance = textHeight - tooltipHeight;
+
+  if (scrollDistance <= 0) {
+    // No scrolling needed, text fits
+    return;
+  }
+
+  // Animation parameters
+  const scrollSpeed = 20; // pixels per second (slower for better readability)
+  const scrollDuration = (scrollDistance / scrollSpeed) * 1000; // milliseconds
+  const pauseDuration = 1000; // 1 second pause
+
+  let animationState = {
+    timeout: null,
+    interval: null
+  };
+
+  function animateScroll() {
+    let startTime = Date.now();
+    let startPosition = 0;
+
+    // Scroll animation
+    animationState.interval = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / scrollDuration, 1);
+      const currentPosition = startPosition - (scrollDistance * progress);
+
+      tooltipText.style.transform = `translateY(${currentPosition}px)`;
+
+      if (progress >= 1) {
+        clearInterval(animationState.interval);
+
+        // Wait 1 second, then reset and wait 1 second, then start again
+        animationState.timeout = setTimeout(() => {
+          tooltipText.style.transform = 'translateY(0)';
+
+          animationState.timeout = setTimeout(() => {
+            // Check if we're still hovering the same card
+            if (currentAnimatedCard === appCard) {
+              animateScroll();
+            }
+          }, pauseDuration);
+        }, pauseDuration);
+      }
+    }, 50); // Update every 50ms for smooth animation
+  }
+
+  // Store animation state
+  activeTooltipAnimation = animationState;
+
+  // Start the animation
+  animateScroll();
+}
+
+function stopTooltipScroll(tooltipText) {
+  // Clear any active animations
+  if (activeTooltipAnimation) {
+    if (activeTooltipAnimation.timeout) {
+      clearTimeout(activeTooltipAnimation.timeout);
+    }
+    if (activeTooltipAnimation.interval) {
+      clearInterval(activeTooltipAnimation.interval);
+    }
+    activeTooltipAnimation = null;
+  }
+
+  // Reset position
+  tooltipText.style.transform = 'translateY(0)';
+  currentAnimatedCard = null;
 }

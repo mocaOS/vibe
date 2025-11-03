@@ -22,11 +22,5 @@
     "name": "Community Made",
     "slug": "community",
     "color": "#FFE100"
-  },
-  {
-    "id": 5,
-    "name": "$MOCA",
-    "slug": "token",
-    "color": "#FF0099"
   }
 ]
