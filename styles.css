@@ -167,7 +167,7 @@ body {
   width:100%;
   bottom: 0;
   left: 0;
-  border-radius: 0 0 calc(var(--border-radius) - 4px) calc(var(--border-radius) - 4px);
+  border-radius: 0 0 calc(var(--border-radius) + 1px) calc(var(--border-radius) + 1px);
   margin-bottom: 0;
   padding: 0.5rem 1.5rem;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1));
@@ -190,6 +190,7 @@ body {
   pointer-events: none;
 }
 
+
 .app-card:hover .play-button {
   opacity: 1;
   visibility: visible;
@@ -205,6 +206,7 @@ body {
 .app-card:hover .app-title {
   color: #000000;
   background: var(--app-title-color);
+  border-radius: 0 0 calc(var(--border-radius) - 5px) calc(var(--border-radius) - 5px);
 }
 
 .tooltip {
