@@ -98,6 +98,7 @@ let typeColorMap = {}; // Map slug to color
 // Tooltip scroll management
 let activeTooltipAnimation = null;
 let currentAnimatedCard = null;
+let currentActiveCard = null; // Track currently active card to ensure only one tooltip is visible
 
 // Load apps and populate the grid
 document.addEventListener('DOMContentLoaded', function() {
@@ -215,6 +216,33 @@ function toggleFilter(slug, button) {
   setupPagination();
 }
 
+// Helper function to deactivate the current card
+function deactivateCurrentCard() {
+  if (currentActiveCard) {
+    const prevTooltipText = currentActiveCard.querySelector('.tooltip-text');
+    if (prevTooltipText) {
+      prevTooltipText.style.transform = 'translateY(0)';
+    }
+    currentActiveCard.classList.remove('active');
+  }
+
+  // Clear any active animations
+  if (activeTooltipAnimation) {
+    // Clear all timeouts
+    if (activeTooltipAnimation.timeouts) {
+      activeTooltipAnimation.timeouts.forEach(id => clearTimeout(id));
+    }
+    // Clear interval
+    if (activeTooltipAnimation.interval) {
+      clearInterval(activeTooltipAnimation.interval);
+    }
+    activeTooltipAnimation = null;
+  }
+
+  currentActiveCard = null;
+  currentAnimatedCard = null;
+}
+
 // Get filtered apps based on active filters
 function getFilteredApps() {
   if (activeFilters.size === 0) {
@@ -230,6 +258,9 @@ function displayApps(page) {
   const startIndex = (page - 1) * APPS_PER_PAGE;
   const endIndex = startIndex + APPS_PER_PAGE;
   const appsToDisplay = filteredApps.slice(startIndex, endIndex);
+
+  // Clear any active tooltips before regenerating the grid
+  deactivateCurrentCard();
 
   appGrid.innerHTML = '';
 
@@ -260,17 +291,28 @@ function displayApps(page) {
 
     // Mouse events for desktop
     appCard.addEventListener('mouseenter', () => {
+      // Deactivate any previously active card
+      deactivateCurrentCard();
+      currentActiveCard = appCard;
       startTooltipScroll(tooltip, tooltipText, appCard);
     });
 
     appCard.addEventListener('mouseleave', () => {
-      stopTooltipScroll(tooltipText);
+      if (currentActiveCard === appCard) {
+        currentActiveCard = null;
+      }
+      stopTooltipScroll(tooltipText, appCard);
     });
 
     // Touch events for mobile
     appCard.addEventListener('touchstart', (e) => {
+      // Deactivate any previously active card
+      deactivateCurrentCard();
+
       // Add active class to show tooltip immediately
       appCard.classList.add('active');
+      currentActiveCard = appCard;
+
       // Start scrolling immediately on touch
       startTooltipScroll(tooltip, tooltipText, appCard);
     }, { passive: true });
@@ -278,13 +320,19 @@ function displayApps(page) {
     appCard.addEventListener('touchend', () => {
       // Remove active class to hide tooltip
       appCard.classList.remove('active');
-      stopTooltipScroll(tooltipText);
+      if (currentActiveCard === appCard) {
+        currentActiveCard = null;
+      }
+      stopTooltipScroll(tooltipText, appCard);
     });
 
     appCard.addEventListener('touchcancel', () => {
       // Remove active class to hide tooltip
       appCard.classList.remove('active');
-      stopTooltipScroll(tooltipText);
+      if (currentActiveCard === appCard) {
+        currentActiveCard = null;
+      }
+      stopTooltipScroll(tooltipText, appCard);
     });
 
     appCard.addEventListener('click', () => showAppDetails(app));
@@ -441,13 +489,20 @@ function showAppDetails(app) {
 
 // Tooltip scroll animation functions
 function startTooltipScroll(tooltip, tooltipText, appCard) {
-  // Stop any existing animation
+  // Stop any existing animation completely
   if (activeTooltipAnimation) {
-    clearTimeout(activeTooltipAnimation.timeout);
-    clearInterval(activeTooltipAnimation.interval);
+    // Clear all timeouts
+    if (activeTooltipAnimation.timeouts) {
+      activeTooltipAnimation.timeouts.forEach(id => clearTimeout(id));
+    }
+    // Clear interval
+    if (activeTooltipAnimation.interval) {
+      clearInterval(activeTooltipAnimation.interval);
+    }
+    activeTooltipAnimation = null;
   }
 
-  // Reset position
+  // Reset position to start from the beginning
   tooltipText.style.transform = 'translateY(0)';
 
   // Store current card
@@ -455,8 +510,18 @@ function startTooltipScroll(tooltip, tooltipText, appCard) {
 
   // Use requestAnimationFrame to ensure tooltip is rendered before calculating dimensions
   requestAnimationFrame(() => {
+    // Verify we're still on the same card after the frame
+    if (currentAnimatedCard !== appCard) {
+      return;
+    }
+
     // Small additional delay to ensure CSS transition completes
-    setTimeout(() => {
+    const initTimeout = setTimeout(() => {
+      // Double-check we're still on the same card
+      if (currentAnimatedCard !== appCard) {
+        return;
+      }
+
       // Get dimensions
       const tooltipHeight = tooltip.clientHeight;
       const textHeight = tooltipText.scrollHeight;
@@ -475,16 +540,27 @@ function startTooltipScroll(tooltip, tooltipText, appCard) {
       const pauseDuration = 1000; // 1 second pause
 
       let animationState = {
-        timeout: null,
+        timeouts: [], // Array to store all timeout IDs
         interval: null
       };
 
       function animateScroll() {
+        // Check if we're still on the same card before starting
+        if (currentAnimatedCard !== appCard) {
+          return;
+        }
+
         let startTime = Date.now();
         let startPosition = 0;
 
         // Scroll animation
         animationState.interval = setInterval(() => {
+          // Safety check during animation
+          if (currentAnimatedCard !== appCard) {
+            clearInterval(animationState.interval);
+            return;
+          }
+
           const elapsed = Date.now() - startTime;
           const progress = Math.min(elapsed / scrollDuration, 1);
           const currentPosition = startPosition - (scrollDistance * progress);
@@ -493,18 +569,26 @@ function startTooltipScroll(tooltip, tooltipText, appCard) {
 
           if (progress >= 1) {
             clearInterval(animationState.interval);
+            animationState.interval = null;
 
-            // Wait 1 second, then reset and wait 1 second, then start again
-            animationState.timeout = setTimeout(() => {
+            // Wait 1 second, then reset
+            const pauseTimeout1 = setTimeout(() => {
+              if (currentAnimatedCard !== appCard) {
+                return;
+              }
               tooltipText.style.transform = 'translateY(0)';
 
-              animationState.timeout = setTimeout(() => {
-                // Check if we're still hovering the same card
+              // Wait 1 second, then start again
+              const pauseTimeout2 = setTimeout(() => {
                 if (currentAnimatedCard === appCard) {
                   animateScroll();
                 }
               }, pauseDuration);
+
+              animationState.timeouts.push(pauseTimeout2);
             }, pauseDuration);
+
+            animationState.timeouts.push(pauseTimeout1);
           }
         }, 50); // Update every 50ms for smooth animation
       }
@@ -518,12 +602,19 @@ function startTooltipScroll(tooltip, tooltipText, appCard) {
   });
 }
 
-function stopTooltipScroll(tooltipText) {
+function stopTooltipScroll(tooltipText, appCard) {
+  // Only stop if this is the currently animated card
+  if (currentAnimatedCard !== appCard) {
+    return;
+  }
+
   // Clear any active animations
   if (activeTooltipAnimation) {
-    if (activeTooltipAnimation.timeout) {
-      clearTimeout(activeTooltipAnimation.timeout);
+    // Clear all timeouts
+    if (activeTooltipAnimation.timeouts) {
+      activeTooltipAnimation.timeouts.forEach(id => clearTimeout(id));
     }
+    // Clear interval
     if (activeTooltipAnimation.interval) {
       clearInterval(activeTooltipAnimation.interval);
     }

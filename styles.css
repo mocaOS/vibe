@@ -511,7 +511,7 @@ body {
   }
 
   .app-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
   }
 
@@ -547,9 +547,8 @@ body {
     font-size: 1.7rem;
   }
 
-  .play-button,
-  .app-title{
-    font-size: 1rem;
+  .type-filter-button{
+    font-size:1.1rem;
   }
 
   /* Adjust launch button for mobile */
