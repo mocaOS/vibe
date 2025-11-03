@@ -218,6 +218,7 @@ function toggleFilter(slug, button) {
 
 // Helper function to deactivate the current card
 function deactivateCurrentCard() {
+  // Remove active class from the tracked card
   if (currentActiveCard) {
     const prevTooltipText = currentActiveCard.querySelector('.tooltip-text');
     if (prevTooltipText) {
@@ -225,6 +226,16 @@ function deactivateCurrentCard() {
     }
     currentActiveCard.classList.remove('active');
   }
+
+  // Also remove active class from ANY card that might have it (safety net for mobile)
+  const allActiveCards = document.querySelectorAll('.app-card.active');
+  allActiveCards.forEach(card => {
+    card.classList.remove('active');
+    const tooltipText = card.querySelector('.tooltip-text');
+    if (tooltipText) {
+      tooltipText.style.transform = 'translateY(0)';
+    }
+  });
 
   // Clear any active animations
   if (activeTooltipAnimation) {
