@@ -544,10 +544,9 @@ body {
     font-size: 1.7rem;
   }
 
-  /* Adjust tooltip for mobile */
-  .tooltip {
-    font-size: 0.75rem;
-    padding: 0.75rem;
+  .play-button,
+  .app-title{
+    font-size: 1rem;
   }
 
   /* Adjust launch button for mobile */
