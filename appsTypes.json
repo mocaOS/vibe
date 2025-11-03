@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Museum",
+    "slug": "museum",
+    "color": "#FFFFFF"
+  },
+  {
+    "id": 2,
+    "name": "DeCC0s",
+    "slug": "decc0s",
+    "color": "#FF9500"
+  },
+  {
+    "id": 3,
+    "name": "Metaverse",
+    "slug": "metaverse",
+    "color": "#C3FF00"
+  },
+  {
+    "id": 4,
+    "name": "Community Made",
+    "slug": "community",
+    "color": "#FFE100"
+  },
+  {
+    "id": 5,
+    "name": "$MOCA",
+    "slug": "token",
+    "color": "#FF0099"
+  }
+]

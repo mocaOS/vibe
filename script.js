@@ -1,3 +1,45 @@
+// Infinite Marquee Animation
+function initMarquee() {
+  const marqueeContent = document.getElementById('marqueeContent');
+  const marqueeText = marqueeContent.querySelector('.marquee-text');
+
+  // Add enough clones to fill viewport and ensure seamless scrolling
+  // We'll add multiple copies to avoid any gaps
+  const numCopies = 3;
+  for (let i = 0; i < numCopies; i++) {
+    const clone = marqueeText.cloneNode(true);
+    marqueeContent.appendChild(clone);
+  }
+
+  let position = 0;
+  const speed = 0.5; // pixels per frame
+
+  function animate() {
+    position -= speed;
+
+    // Get the width of one text element
+    const textWidth = marqueeText.offsetWidth;
+
+    // Reset position when first copy has completely scrolled off
+    if (Math.abs(position) >= textWidth) {
+      position = 0;
+    }
+
+    marqueeContent.style.transform = `translateX(${position}px)`;
+    requestAnimationFrame(animate);
+  }
+
+  // Start animation immediately
+  requestAnimationFrame(animate);
+}
+
+// Initialize marquee as early as possible
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initMarquee);
+} else {
+  initMarquee();
+}
+
 // Simple markdown renderer for long descriptions
 function renderMarkdown(text) {
   // Convert headers
@@ -49,21 +91,34 @@ function renderMarkdown(text) {
 const APPS_PER_PAGE = 12;
 let currentPage = 1;
 let appsData = [];
+let appsTypes = [];
+let activeFilters = new Set(); // Track active type filters
+let typeColorMap = {}; // Map slug to color
 
 // Load apps and populate the grid
 document.addEventListener('DOMContentLoaded', function() {
   const appGrid = document.getElementById('appGrid');
 
-  // Fetch apps data from JSON file
-  fetch('appsData.json')
-    .then(response => response.json())
-    .then(data => {
-      appsData = data;
+  // Fetch both apps data and types data
+  Promise.all([
+    fetch('appsData.json').then(response => response.json()),
+    fetch('appsTypes.json').then(response => response.json())
+  ])
+    .then(([apps, types]) => {
+      appsData = apps;
+      appsTypes = types;
+
+      // Create type color map
+      types.forEach(type => {
+        typeColorMap[type.slug] = type.color;
+      });
+
+      displayTypeFilters();
       displayApps(currentPage);
       setupPagination();
     })
     .catch(error => {
-      console.error('Error loading apps data:', error);
+      console.error('Error loading data:', error);
       // Fallback to showing an error message in the grid
       appGrid.innerHTML = '<p class="error-message">Failed to load applications data.</p>';
     });
@@ -103,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
           currentPage--;
           displayApps(currentPage);
           setupPagination();
-        } else if (event.key === 'ArrowRight' && currentPage < Math.ceil(appsData.length / APPS_PER_PAGE)) {
+        } else if (event.key === 'ArrowRight' && currentPage < Math.ceil(getFilteredApps().length / APPS_PER_PAGE)) {
           currentPage++;
           displayApps(currentPage);
           setupPagination();
@@ -113,12 +168,57 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Display type filter buttons
+function displayTypeFilters() {
+  const typeFilters = document.getElementById('typeFilters');
+  typeFilters.innerHTML = '';
+
+  appsTypes.forEach(type => {
+    const button = document.createElement('button');
+    button.className = 'type-filter-button';
+    button.textContent = type.name;
+    button.dataset.slug = type.slug;
+    button.style.setProperty('--type-color', type.color);
+
+    button.addEventListener('click', () => {
+      toggleFilter(type.slug, button);
+    });
+
+    typeFilters.appendChild(button);
+  });
+}
+
+// Toggle filter on/off
+function toggleFilter(slug, button) {
+  if (activeFilters.has(slug)) {
+    activeFilters.delete(slug);
+    button.classList.remove('active');
+  } else {
+    activeFilters.add(slug);
+    button.classList.add('active');
+  }
+
+  // Reset to first page when filter changes
+  currentPage = 1;
+  displayApps(currentPage);
+  setupPagination();
+}
+
+// Get filtered apps based on active filters
+function getFilteredApps() {
+  if (activeFilters.size === 0) {
+    return appsData;
+  }
+  return appsData.filter(app => activeFilters.has(app.type));
+}
+
 // Display apps for the current page
 function displayApps(page) {
   const appGrid = document.getElementById('appGrid');
+  const filteredApps = getFilteredApps();
   const startIndex = (page - 1) * APPS_PER_PAGE;
   const endIndex = startIndex + APPS_PER_PAGE;
-  const appsToDisplay = appsData.slice(startIndex, endIndex);
+  const appsToDisplay = filteredApps.slice(startIndex, endIndex);
 
   appGrid.innerHTML = '';
 
@@ -128,10 +228,16 @@ function displayApps(page) {
     appCard.className = 'app-card';
     appCard.dataset.appId = app.id;
 
+    // Set the border color and title color based on app type
+    const typeColor = typeColorMap[app.type] || '#FFFFFF';
+    appCard.style.setProperty('--app-border-color', typeColor);
+    appCard.style.setProperty('--app-title-color', typeColor);
+
     appCard.innerHTML = `
       <img src="${app.img}" alt="${app.title}" class="app-icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'80\\' height=\\'80\\' viewBox=\\'0 0 24 24\\'><rect width=\\'24\\' height=\\'24\\' fill=\\'%232a2a2a\\'/><path fill=\\'%23cccccc\\' d=\\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z\\'/></svg>'">
-      <h3 class="app-title">${app.title}</h3>
+
       <div class="tooltip">${app.shortDescription}</div>
+      <h3 class="app-title">${app.title}</h3>
     `;
 
     appCard.addEventListener('click', () => showAppDetails(app));
@@ -157,7 +263,8 @@ function displayApps(page) {
 // Setup pagination controls
 function setupPagination() {
   const pagination = document.getElementById('pagination');
-  const pageCount = Math.ceil(appsData.length / APPS_PER_PAGE);
+  const filteredApps = getFilteredApps();
+  const pageCount = Math.ceil(filteredApps.length / APPS_PER_PAGE);
 
   pagination.innerHTML = '';
 

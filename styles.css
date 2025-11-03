@@ -7,7 +7,7 @@
   --text-primary: #ffffff;
   --text-secondary: #cccccc;
   --text-tertiary: #999999;
-  --border-radius: 8px;
+  --border-radius: 25px;
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   --transition: all 0.2s ease;
 }
@@ -25,28 +25,92 @@ body {
   line-height: 1.6;
 }
 
-.app-store {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1.5rem 1.5rem 0;
-  isolation: isolate; /* Create a new stacking context */
-}
-
 /* MOCA Logo */
 .moca-logo {
   display: block;
-  margin: 1rem auto 1rem auto;
-  width: 12em;
+  margin: 1rem auto;
+  width: 8em;
   height: auto;
 }
 
+/* CSS3 Marquee */
+.marquee-container {
+  border-top: 1px solid var(--text-primary);
+  border-bottom: 1px solid var(--text-primary);
+  padding: 0.5rem 0;
+  font-style: italic;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-content {
+  display: inline-flex;
+  will-change: transform;
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.marquee-container a {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.app-store {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+  isolation: isolate; /* Create a new stacking context */
+}
+
 .app-store h1 {
-  text-align: center;
-  margin-bottom: 2.5rem;
-  font-weight: 300;
-  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  font-size: 2.2rem;
+  font-weight: 600;
   color: var(--text-primary);
   letter-spacing: 0.5px;
+}
+
+
+.app-store h2 {
+  margin-bottom: 2rem;
+  color: var(--text-tertiary);
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+/* Type Filters */
+.type-filters {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.type-filter-button {
+  font-size: 1.3rem;
+  background-color: transparent;
+  color: var(--type-color);
+  border: 1px solid var(--type-color);
+  padding: 1.2rem;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.type-filter-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.type-filter-button.active {
+  background-color: var(--type-color);
+  color: #000000;
 }
 
 /* App Grid */
@@ -59,8 +123,6 @@ body {
 }
 
 .app-card {
-  padding: 0.6rem;
-  text-align: center;
   cursor: pointer;
   transition: var(--transition);
   box-shadow: var(--shadow);
@@ -73,87 +135,64 @@ body {
   z-index: 1;
   overflow: visible; /* Ensure tooltips aren't clipped */
   isolation: isolate; /* Create a new stacking context for each card */
-}
-
-.app-card:hover {
-  transform: translateY(-4px);
-  z-index: 10; /* Increase z-index on hover to ensure it's above other cards */
+  border: 2px solid var(--app-border-color, #FFFFFF);
+  border-radius: var(--border-radius);
+  background-color: #000000;
 }
 
 .app-icon {
-  width: 120px;
-  height: 120px;
-  border-radius: 12px;
-  object-fit: contain;
-  margin-bottom: 1rem;
-  background-color: #000000;
-  border: 2px solid #fff;
+  width: 100%;
+  border-radius: var(--border-radius);
 }
 
 .app-title {
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 500;
   margin-bottom: 0.4rem;
-  color: var(--text-primary);
+  color: var(--app-title-color, var(--text-primary));
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
+  position:absolute;
+  width:100%;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 calc(var(--border-radius) - 4px) calc(var(--border-radius) - 4px);
+  margin-bottom: 0;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1));
+  text-transform: uppercase;
+  z-index: 2;
 }
 
 /* Tooltip for app descriptions */
 .app-card:hover .tooltip {
   visibility: visible;
   opacity: 1;
-  transform: translate(-50%, 0);
+}
+
+.app-card:hover .app-title {
+  color: #000000;
+  background: var(--app-title-color);
 }
 
 .tooltip {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  bottom: -45px;
-  left: 50%;
-  transform: translate(-50%, 10px);
-  background-color: var(--bg-secondary);
-  color: var(--text-secondary);
-  text-align: center;
-  padding: 0.5rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  width: 200px;
-  z-index: 1000;
-  transition: all 0.2s ease;
-  box-shadow: var(--shadow);
-  pointer-events: none;
-  white-space: normal;
-  word-wrap: break-word;
-  /* Remove will-change property that can cause blurry text */
-  /* Add properties to improve text rendering */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  /* Use transform3d for better rendering */
-  backface-visibility: hidden;
-  transform: translate3d(-50%, 10px, 0);
-}
-
-.tooltip::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 0 5px 5px 5px;
-  border-style: solid;
-  border-color: transparent transparent var(--bg-secondary) transparent;
-}
-
-/* Improve tooltip text rendering on hover */
-.app-card:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
-  transform: translate3d(-50%, 0, 0);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 1.6rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  text-transform: uppercase;
+  z-index: 1;
 }
 
 /* Filler Cards */
@@ -416,6 +455,17 @@ body {
     width: 6em;
   }
 
+  /* Type filters on mobile */
+  .type-filters {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .type-filter-button {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+
   .app-grid {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 1rem;
@@ -456,15 +506,8 @@ body {
 
   /* Adjust tooltip for mobile */
   .tooltip {
-    width: 150px;
-    font-size: 0.7rem;
-    bottom: -45px;
-    z-index: 1000;
-    /* Improve mobile text rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    backface-visibility: hidden;
+    font-size: 0.75rem;
+    padding: 0.75rem;
   }
 
   /* Adjust launch button for mobile */
