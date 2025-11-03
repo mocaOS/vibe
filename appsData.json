@@ -68,5 +68,15 @@
     "img": "imgs/agora.png",
     "url": "https://museumofcrypto.substack.com/",
     "type": "metaverse"
+  },
+  {
+    "id": 8,
+    "title": "Airdrop",
+    "shortDescription": "TBD",
+    "author": "Museum Of Cryto Art",
+    "longDescription": "",
+    "img": "imgs/airdrop.png",
+    "url": "",
+    "type": "token"
   }
 ]
