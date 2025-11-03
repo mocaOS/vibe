@@ -128,46 +128,45 @@ document.addEventListener('DOMContentLoaded', function() {
       appGrid.innerHTML = '<p class="error-message">Failed to load applications data.</p>';
     });
 
-  // Modal functionality
-  const modal = document.getElementById('detailsModal');
-  const closeBtn = document.querySelector('.close');
+  // Modal functionality - COMMENTED OUT - Will be reactivated later
+  // const modal = document.getElementById('detailsModal');
+  // const closeBtn = document.querySelector('.close');
 
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
+  // closeBtn.addEventListener('click', () => {
+  //   modal.style.display = 'none';
+  // });
 
-  window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
+  // window.addEventListener('click', (event) => {
+  //   if (event.target === modal) {
+  //     modal.style.display = 'none';
+  //   }
+  // });
 
   // Keyboard navigation
   document.addEventListener('keydown', (event) => {
+    // MODAL FUNCTIONALITY COMMENTED OUT - Will be reactivated later
     // Only handle keyboard events when modal is not open
-    const isModalOpen = modal.style.display === 'block';
+    // const isModalOpen = modal.style.display === 'block';
 
     // Handle ESC key to close modal
-    if (event.key === 'Escape' && isModalOpen) {
-      modal.style.display = 'none';
-      return;
-    }
+    // if (event.key === 'Escape' && isModalOpen) {
+    //   modal.style.display = 'none';
+    //   return;
+    // }
 
-    // Handle arrow keys for pagination only when modal is closed
-    if (!isModalOpen) {
-      // Prevent default behavior for arrow keys to avoid page scrolling
-      if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-        event.preventDefault();
+    // Handle arrow keys for pagination
+    // Prevent default behavior for arrow keys to avoid page scrolling
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
 
-        if (event.key === 'ArrowLeft' && currentPage > 1) {
-          currentPage--;
-          displayApps(currentPage);
-          setupPagination();
-        } else if (event.key === 'ArrowRight' && currentPage < Math.ceil(getFilteredApps().length / APPS_PER_PAGE)) {
-          currentPage++;
-          displayApps(currentPage);
-          setupPagination();
-        }
+      if (event.key === 'ArrowLeft' && currentPage > 1) {
+        currentPage--;
+        displayApps(currentPage);
+        setupPagination();
+      } else if (event.key === 'ArrowRight' && currentPage < Math.ceil(getFilteredApps().length / APPS_PER_PAGE)) {
+        currentPage++;
+        displayApps(currentPage);
+        setupPagination();
       }
     }
   });
@@ -346,7 +345,12 @@ function displayApps(page) {
       stopTooltipScroll(tooltipText, appCard);
     });
 
-    appCard.addEventListener('click', () => showAppDetails(app));
+    // Changed: Click now opens URL in new tab instead of modal
+    appCard.addEventListener('click', () => {
+      if (app.url && app.url.trim() !== '') {
+        window.open(app.url, '_blank');
+      }
+    });
     appGrid.appendChild(appCard);
   });
 
@@ -465,38 +469,38 @@ function setupPagination() {
   pagination.appendChild(nextButton);
 }
 
-// Show app details in modal
-function showAppDetails(app) {
-  const appDetails = document.getElementById('appDetails');
+// Show app details in modal - COMMENTED OUT - Will be reactivated later
+// function showAppDetails(app) {
+//   const appDetails = document.getElementById('appDetails');
 
-  appDetails.innerHTML = `
-    <div class="app-details-header">
-      <img src="${app.img}" alt="${app.title}" class="app-details-icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100\\' height=\\'100\\' viewBox=\\'0 0 24 24\\'><rect width=\\'24\\' height=\\'24\\' fill=\\'%232a2a2a\\'/><path fill=\\'%23cccccc\\' d=\\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z\\'/></svg>'">
-      <div>
-        <h2 class="app-details-title">${app.title}</h2>
-        <p class="app-details-author">${app.author}</p>
-      </div>
-      <button class="launch-button" id="launchButton" href="${app.url}">Launch</button>
-    </div>
-    <div class="app-long-description">
-      ${renderMarkdown(app.longDescription)}
-    </div>
-  `;
+//   appDetails.innerHTML = `
+//     <div class="app-details-header">
+//       <img src="${app.img}" alt="${app.title}" class="app-details-icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100\\' height=\\'100\\' viewBox=\\'0 0 24 24\\'><rect width=\\'24\\' height=\\'24\\' fill=\\'%232a2a2a\\'/><path fill=\\'%23cccccc\\' d=\\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z\\'/></svg>'">
+//       <div>
+//         <h2 class="app-details-title">${app.title}</h2>
+//         <p class="app-details-author">${app.author}</p>
+//       </div>
+//       <button class="launch-button" id="launchButton" href="${app.url}">Launch</button>
+//     </div>
+//     <div class="app-long-description">
+//       ${renderMarkdown(app.longDescription)}
+//     </div>
+//   `;
 
-  document.getElementById('detailsModal').style.display = 'block';
+//   document.getElementById('detailsModal').style.display = 'block';
 
-  // Add event listener to launch button
-  document.getElementById('launchButton').addEventListener('click', function() {
-    // Check if the app has a URL
-    if (app.url && app.url.trim() !== '') {
-      // Open the URL in a new tab
-      window.open(app.url, '_blank');
-    } else {
-      // If no URL is provided, show an alert
-      alert(`No URL available for ${app.title}.`);
-    }
-  });
-}
+//   // Add event listener to launch button
+//   document.getElementById('launchButton').addEventListener('click', function() {
+//     // Check if the app has a URL
+//     if (app.url && app.url.trim() !== '') {
+//       // Open the URL in a new tab
+//       window.open(app.url, '_blank');
+//     } else {
+//       // If no URL is provided, show an alert
+//       alert(`No URL available for ${app.title}.`);
+//     }
+//   });
+// }
 
 // Tooltip scroll animation functions
 function startTooltipScroll(tooltip, tooltipText, appCard) {
