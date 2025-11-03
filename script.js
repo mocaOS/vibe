@@ -316,8 +316,6 @@ function displayApps(page) {
     });
 
     // Touch events for mobile
-    let touchTimer = null;
-
     appCard.addEventListener('touchstart', (e) => {
       // Deactivate any previously active card
       deactivateCurrentCard();
@@ -328,37 +326,9 @@ function displayApps(page) {
 
       // Start scrolling immediately on touch
       startTooltipScroll(tooltip, tooltipText, appCard);
-
-      // Set a timer to clean up if touch events don't fire properly
-      touchTimer = setTimeout(() => {
-        if (currentActiveCard === appCard) {
-          appCard.classList.remove('active');
-          currentActiveCard = null;
-          stopTooltipScroll(tooltipText, appCard);
-        }
-      }, 5000); // Auto-cleanup after 5 seconds
-    }, { passive: true });
-
-    appCard.addEventListener('touchmove', () => {
-      // Clear the timer if user is scrolling
-      if (touchTimer) {
-        clearTimeout(touchTimer);
-        touchTimer = null;
-      }
-      // Also hide tooltip when scrolling
-      appCard.classList.remove('active');
-      if (currentActiveCard === appCard) {
-        currentActiveCard = null;
-      }
-      stopTooltipScroll(tooltipText, appCard);
     }, { passive: true });
 
     appCard.addEventListener('touchend', () => {
-      // Clear the safety timer
-      if (touchTimer) {
-        clearTimeout(touchTimer);
-        touchTimer = null;
-      }
       // Remove active class to hide tooltip
       appCard.classList.remove('active');
       if (currentActiveCard === appCard) {
@@ -368,11 +338,6 @@ function displayApps(page) {
     });
 
     appCard.addEventListener('touchcancel', () => {
-      // Clear the safety timer
-      if (touchTimer) {
-        clearTimeout(touchTimer);
-        touchTimer = null;
-      }
       // Remove active class to hide tooltip
       appCard.classList.remove('active');
       if (currentActiveCard === appCard) {
@@ -381,22 +346,7 @@ function displayApps(page) {
       stopTooltipScroll(tooltipText, appCard);
     });
 
-    // Prevent context menu on long press (prevents the blue flicker issue)
-    appCard.addEventListener('contextmenu', (e) => {
-      e.preventDefault();
-      // Also cleanup tooltip when context menu would trigger
-      appCard.classList.remove('active');
-      if (currentActiveCard === appCard) {
-        currentActiveCard = null;
-      }
-      stopTooltipScroll(tooltipText, appCard);
-    });
-
-    appCard.addEventListener('click', () => {
-      // Cleanup tooltip before opening modal
-      deactivateCurrentCard();
-      showAppDetails(app);
-    });
+    appCard.addEventListener('click', () => showAppDetails(app));
     appGrid.appendChild(appCard);
   });
 
