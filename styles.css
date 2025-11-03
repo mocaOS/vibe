@@ -169,7 +169,7 @@ body {
   left: 0;
   border-radius: 0 0 calc(var(--border-radius) + 1px) calc(var(--border-radius) + 1px);
   margin-bottom: 0;
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem 1.5rem 0.5rem;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1));
   text-transform: uppercase;
   z-index: 2;
@@ -178,7 +178,7 @@ body {
 /* Play button */
 .play-button {
   position: absolute;
-  bottom: 0.5rem;
+  bottom: 0.6rem;
   right: 1.5rem;
   font-size: 1.5rem;
   color: #000000;
