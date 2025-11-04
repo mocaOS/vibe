@@ -51,13 +51,13 @@
   },
   {
     "id": 6,
-    "title": "MOCA Substack",
-    "shortDescription": "Industry-leading writing about crypto art, AI, the metaverse, cryptocurrency, and web3 culture, released weekly.",
-    "author": "Museum Of Cryto Art",
-    "longDescription": "Our living chronicle of the digital art movement, containing writings about crypto art, AI, the metaverse, cryptocurrency, and web3 culture. Sign-up to get essays, our **MOCA Weekly Roundup** of news from across the culture, and every MOCA announcement sent right to your inbox. Join nearly 1200 others in our ever-deepening rabbit hole.\n\nAnd find many more essays, from **CohentheWriter**, **Anubis3100**, **Julian Brangold**, and others, at [https://museumofcryptoart.medium.com](https://museumofcryptoart.medium.com).",
-    "img": "imgs/substack.png",
-    "url": "https://museumofcrypto.substack.com/",
-    "type": "museum"
+    "title": "Decc0 World Map",
+    "shortDescription": "",
+    "author": "Daïm Al-Yad",
+    "longDescription": "",
+    "img": "imgs/map.png",
+    "url": "https://map.decc0s.com",
+    "type": "community"
   },
   {
     "id": 7,
@@ -71,13 +71,13 @@
   },
   {
     "id": 8,
-    "title": "Decc0 World Map",
-    "shortDescription": "",
-    "author": "Daïm Al-Yad",
-    "longDescription": "",
-    "img": "imgs/map.png",
+    "title": "MOCA Substack",
+    "shortDescription": "Industry-leading writing about crypto art, AI, the metaverse, cryptocurrency, and web3 culture, released weekly.",
+    "author": "Museum Of Cryto Art",
+    "longDescription": "Our living chronicle of the digital art movement, containing writings about crypto art, AI, the metaverse, cryptocurrency, and web3 culture. Sign-up to get essays, our **MOCA Weekly Roundup** of news from across the culture, and every MOCA announcement sent right to your inbox. Join nearly 1200 others in our ever-deepening rabbit hole.\n\nAnd find many more essays, from **CohentheWriter**, **Anubis3100**, **Julian Brangold**, and others, at [https://museumofcryptoart.medium.com](https://museumofcryptoart.medium.com).",
+    "img": "imgs/substack.png",
     "url": "https://museumofcrypto.substack.com/",
-    "type": "community"
+    "type": "museum"
   },
   {
     "id": 9,
