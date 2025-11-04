@@ -72,9 +72,9 @@
   {
     "id": 8,
     "title": "MOCA Substack",
-    "shortDescription": "Industry-leading writing about crypto art, AI, the metaverse, cryptocurrency, and web3 culture, released weekly.",
+    "shortDescription": "Sign-up for industry-leading writing about crypto art, AI, the metaverse, cryptocurrency, and web3 culture, released weekly.",
     "author": "Museum Of Cryto Art",
-    "longDescription": "Our living chronicle of the digital art movement, containing writings about crypto art, AI, the metaverse, cryptocurrency, and web3 culture. Sign-up to get essays, our **MOCA Weekly Roundup** of news from across the culture, and every MOCA announcement sent right to your inbox. Join nearly 1200 others in our ever-deepening rabbit hole.\n\nAnd find many more essays, from **CohentheWriter**, **Anubis3100**, **Julian Brangold**, and others, at [https://museumofcryptoart.medium.com](https://museumofcryptoart.medium.com).",
+    "longDescription": "Sign-up for industry-leading writing about crypto art, AI, the metaverse, cryptocurrency, and web3 culture, released weekly.",
     "img": "imgs/substack.png",
     "url": "https://museumofcrypto.substack.com/",
     "type": "museum"
@@ -82,9 +82,9 @@
   {
     "id": 9,
     "title": "Rooms Archive",
-    "shortDescription": "Discover MOCA ROOMs, our dozens of bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
+    "shortDescription": "Dive into dozens of MOCA ROOMs, our bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
     "author": "Museum Of Crypto Art",
-    "longDescription": "Our ROOMs archive preserves the rich history of MOCA's virtual gallery spaces: how these immersive metaverse environments have changed and developed over time. Every ROOM in our archive has been meticulously crafted by leading artists, architects, and designers to create immersive experiences that showcase digital art in entirely new ways. With every **ROOMs curation** archived permanently on **Filecoin**, this unique scholarship tool allows anyone to see how each **ROOM** has transformed over time, the best way to witness the evolution of curatorial tactics and taste across the years.\n\n**Read the Full ROOMs Story here:**\n[https://museumofcrypto.substack.com/p/preserving-art-and-culture-the-imperative](https://museumofcrypto.substack.com/p/preserving-art-and-culture-the-imperative)",
+    "longDescription": "Dive into dozens of MOCA ROOMs, our bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
     "img": "imgs/rooms.png",
     "url": "https://archive.museumofcryptoart.com/",
     "type": "museum"
