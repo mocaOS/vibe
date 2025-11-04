@@ -31,13 +31,13 @@
   },
   {
     "id": 4,
-    "title": "Rooms Archive",
-    "shortDescription": "Discover MOCA ROOMs, our dozens of bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
+    "title": "Decc0 Launcher",
+    "shortDescription": "",
     "author": "Museum Of Crypto Art",
-    "longDescription": "Our ROOMs archive preserves the rich history of MOCA's virtual gallery spaces: how these immersive metaverse environments have changed and developed over time. Every ROOM in our archive has been meticulously crafted by leading artists, architects, and designers to create immersive experiences that showcase digital art in entirely new ways. With every **ROOMs curation** archived permanently on **Filecoin**, this unique scholarship tool allows anyone to see how each **ROOM** has transformed over time, the best way to witness the evolution of curatorial tactics and taste across the years.\n\n**Read the Full ROOMs Story here:**\n[https://museumofcrypto.substack.com/p/preserving-art-and-culture-the-imperative](https://museumofcrypto.substack.com/p/preserving-art-and-culture-the-imperative)",
-    "img": "imgs/rooms.png",
-    "url": "https://archive.museumofcryptoart.com/",
-    "type": "museum"
+    "longDescription": "",
+    "img": "imgs/launcher.png",
+    "url": "http://v2.museumofcryptoart.com/decc0s",
+    "type": "decc0s"
   },
   {
     "id": 5,
@@ -66,7 +66,27 @@
     "author": "Museum Of Cryto Art",
     "longDescription": "",
     "img": "imgs/agora.png",
-    "url": "https://museumofcrypto.substack.com/",
+    "url": "https://hyperfy.io/un-museums/~hmkk",
     "type": "metaverse"
+  },
+  {
+    "id": 8,
+    "title": "Decc0 World Map",
+    "shortDescription": "",
+    "author": "Daïm Al-Yad",
+    "longDescription": "",
+    "img": "imgs/map.png",
+    "url": "https://museumofcrypto.substack.com/",
+    "type": "community"
+  },
+  {
+    "id": 9,
+    "title": "Rooms Archive",
+    "shortDescription": "Discover MOCA ROOMs, our dozens of bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "Our ROOMs archive preserves the rich history of MOCA's virtual gallery spaces: how these immersive metaverse environments have changed and developed over time. Every ROOM in our archive has been meticulously crafted by leading artists, architects, and designers to create immersive experiences that showcase digital art in entirely new ways. With every **ROOMs curation** archived permanently on **Filecoin**, this unique scholarship tool allows anyone to see how each **ROOM** has transformed over time, the best way to witness the evolution of curatorial tactics and taste across the years.\n\n**Read the Full ROOMs Story here:**\n[https://museumofcrypto.substack.com/p/preserving-art-and-culture-the-imperative](https://museumofcrypto.substack.com/p/preserving-art-and-culture-the-imperative)",
+    "img": "imgs/rooms.png",
+    "url": "https://archive.museumofcryptoart.com/",
+    "type": "museum"
   }
 ]
