@@ -2,9 +2,9 @@
   {
     "id": 1,
     "title": "Museum",
-    "shortDescription": "The OG Museum of Crypto Art. Across five distinct collections, discover some of the most historically-significant, cutting-edge, creative crypto art ever created.",
+    "shortDescription": "Visit the OG Museum of Crypto Art: five collections of cutting-edge crypto art from across time and space. Then, bring your questions and queries to The Library, our AI-powered database of all things crypto art.",
     "author": "Museum Of Crypto Art",
-    "longDescription": "The OG Museum of Crypto Art: a portal to crypto art’s celebrated past and blossoming present. Built on our cutting-edge open-source tech stack, explore our **Genesis Collection** of crypto art minted before 2021, the largest decentralized art collection in existence in our **Community Collection**, the **DaimAlYad collection** of crypto art from around the world, the world’s foremost **Matt Kane Collection** of his 2023 _Moral Performance,_ and more. Dig as deep as you like using our AI-powered Museum database, **The Library**, trained on over 600 trusted documents about crypto art, NFTs, and web3 culture.\n\n**If you want to deploy your own Museum, check our GitHub Repo:**\n\n [https://github.com/mocaOS/museum](https://github.com/mocaOS/museum)",
+    "longDescription": "Visit the OG Museum of Crypto Art: five collections of cutting-edge crypto art from across time and space. Then, bring your questions and queries to The Library, our AI-powered database of all things crypto art.",
     "img": "imgs/museum.png",
     "url": "https://v2.museumofcryptoart.com/",
     "type": "museum"
@@ -32,9 +32,9 @@
   {
     "id": 4,
     "title": "Decc0 Launcher",
-    "shortDescription": "",
+    "shortDescription": "Build your very own Art DeCC0 AI Agents. Fine-tune knowledge-bases, extend personalities, bestow preferences, teach, and send agents on quests, all from this simple ElizaOS interface.",
     "author": "Museum Of Crypto Art",
-    "longDescription": "",
+    "longDescription": "Build your very own Art DeCC0 AI Agents. Fine-tune knowledge-bases, extend personalities, bestow preferences, teach, and send agents on quests, all from this simple ElizaOS interface.",
     "img": "imgs/launcher.png",
     "url": "http://v2.museumofcryptoart.com/decc0s",
     "type": "decc0s"
@@ -62,9 +62,9 @@
   {
     "id": 7,
     "title": "Decc0 Plaza",
-    "shortDescription": "",
+    "shortDescription": "The most visually-diverse PFP collection in existence, on full display. Enter this bespoke Metaverse space, featuring dozens of Art DeCC0s spread throughout Untitled,xyz’s unMuseum 3D architectures.",
     "author": "Museum Of Cryto Art",
-    "longDescription": "",
+    "longDescription": "The most visually-diverse PFP collection in existence, on full display. Enter this bespoke Metaverse space, featuring dozens of Art DeCC0s spread throughout Untitled,xyz’s unMuseum 3D architectures.",
     "img": "imgs/agora.png",
     "url": "https://hyperfy.io/un-museums/~hmkk",
     "type": "metaverse"
