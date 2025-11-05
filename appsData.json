@@ -61,6 +61,16 @@
   },
   {
     "id": 7,
+    "title": "Decc0 Finder",
+    "shortDescription": "Found a Decc0 somewhere on the web? Wanna know the id or name? Here you can upload or paste any decc0 pfp - we'll identify it for you and send you right into its codex profile. ",
+    "author": "Daïm Al-Yad",
+    "longDescription": "Found a Decc0 somewhere on the web? Wanna know the id or name? Here you can upload or paste any decc0 pfp - we'll identify it for you and send you right into its codex profile.",
+    "img": "imgs/find.png",
+    "url": "https://find.decc0s.com",
+    "type": "community"
+  },
+  {
+    "id": 8,
     "title": "Decc0 Plaza",
     "shortDescription": "The most visually-diverse PFP collection in existence, on full display. Enter this bespoke Metaverse space, featuring dozens of Art DeCC0s spread throughout Untitled,xyz’s unMuseum 3D architectures.",
     "author": "Museum Of Cryto Art",
@@ -70,7 +80,7 @@
     "type": "metaverse"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "MOCA Substack",
     "shortDescription": "Sign-up for industry-leading writing about crypto art, AI, the metaverse, cryptocurrency, and web3 culture, released weekly.",
     "author": "Museum Of Cryto Art",
@@ -80,7 +90,7 @@
     "type": "museum"
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Rooms Archive",
     "shortDescription": "Dive into dozens of MOCA ROOMs, our bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
     "author": "Museum Of Crypto Art",
