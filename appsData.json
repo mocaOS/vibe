@@ -98,5 +98,15 @@
     "img": "imgs/rooms.png",
     "url": "https://archive.museumofcryptoart.com/",
     "type": "museum"
+  },
+  {
+    "id": 10,
+    "title": "MOCA Discord",
+    "shortDescription": "Join the official MOCA Discord to find fellow crypto art enthusiasts and to stay up to date with the latest news around Art Decc0s aswell as the vibe studio.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "",
+    "img": "imgs/discord.png",
+    "url": "https://discord.gg/Rs7wxUTrWV",
+    "type": "museum"
   }
 ]
