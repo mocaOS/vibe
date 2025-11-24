@@ -5,7 +5,7 @@
     "shortDescription": "Visit the OG Museum of Crypto Art: five collections of cutting-edge crypto art from across time and space. Then, bring your questions and queries to The Library, our AI-powered database of all things crypto art.",
     "author": "Museum Of Crypto Art",
     "longDescription": "Visit the OG Museum of Crypto Art: five collections of cutting-edge crypto art from across time and space. Then, bring your questions and queries to The Library, our AI-powered database of all things crypto art.",
-    "img": "imgs/museum.png",
+    "img": "imgs/museum.jpg",
     "url": "https://v2.museumofcryptoart.com/",
     "type": "museum"
   },
@@ -15,7 +15,7 @@
     "shortDescription": "Explore all 10,000 Art DeCC0s, from aesthetics to traits, from Agentic Personalities to entire identities. Dive in and see how we’re literally bringing Art DeCC0s to life.",
     "author": "Museum Of Crypto Art",
     "longDescription": "The most visually-diverse PFP collection in existence awaits. Explore the entire Art DeCC0s collection, search for your favorite traits, and across 100,000,000+ total words of description, discover every DeCC0s’s agentic personality: preferences, history, perspective, thought patterns, identity. Dive in and see how we’re literally bringing Art DeCC0s to life. ",
-    "img": "imgs/codex.png",
+    "img": "imgs/codex.jpg",
     "url": "https://codex.decc0s.com/",
     "type": "decc0s"
   },
@@ -25,7 +25,7 @@
     "shortDescription": "Interact with our Art DeCC0 Agents! Chat 1-on-1, ask questions, form genuine connections, and take your new digital best friend home, all in one place.",
     "author": "Museum Of Crypto Art",
     "longDescription": "Find your perfect digital companion from the Art DeCC0s collection and bring them home. This isn't just about acquiring an NFT—it's about finding a partner for all your digital activity ahead. Browse through a rotating gallery of Art DeCC0s and chat with them for yourself. Discover their identities and personality traits, establish novel connections with Art DeCC0s AI Agents, and when you’ve found the right match, take your new best friend off the market. Go on, they won’t bite (even if you ask them to, weirdo).",
-    "img": "imgs/adoption.png",
+    "img": "imgs/adoption.jpg",
     "url": "https://adopt.decc0s.com/",
     "type": "decc0s"
   },
@@ -35,7 +35,7 @@
     "shortDescription": "Build your very own Art DeCC0 AI Agents. Fine-tune knowledge-bases, extend personalities, bestow preferences, teach, and send agents on quests, all from this simple ElizaOS interface.",
     "author": "Museum Of Crypto Art",
     "longDescription": "Build your very own Art DeCC0 AI Agents. Fine-tune knowledge-bases, extend personalities, bestow preferences, teach, and send agents on quests, all from this simple ElizaOS interface.",
-    "img": "imgs/launcher.png",
+    "img": "imgs/launcher.jpg",
     "url": "http://v2.museumofcryptoart.com/decc0s",
     "type": "decc0s"
   },
@@ -45,7 +45,7 @@
     "shortDescription": "Turn your Art DeCC0s into stunning high-resolution prints with the click of a button. Developed and operated by Artscape.",
     "author": "Tor",
     "longDescription": "Our first Community App, developed and operated by Artscape, lets Art DeCC0 holders print any DeCC0 from their collection in stunning high-resolution. Simply connect your wallet holding an Art DeCC0, choose which you want to print, select paper type and size,  and your print will be produced and shipped from the nearest print hub to your location. About Artscape: Artscape provides high-quality fine art prints through token-gating. This enables artists, communities, and galleries to offer collectors authenticated physical versions of their digital artworks — including limited editions and signed originals.",
-    "img": "imgs/print.png",
+    "img": "imgs/print.jpg",
     "url": "https://artscapeprint.com/moca",
     "type": "community"
   },
@@ -55,7 +55,7 @@
     "shortDescription": "Every Art DeCC0 has a home. Discover them all in this interactive world map containing the hometowns and stomping grounds of all 10,000 Art DeCC0s.",
     "author": "Daïm Al-Yad",
     "longDescription": "Every Art DeCC0 has a home. Discover them all in this interactive world map containing the hometowns and stomping grounds of all 10,000 Art DeCC0s.",
-    "img": "imgs/map.png",
+    "img": "imgs/map.jpg",
     "url": "https://map.decc0s.com",
     "type": "community"
   },
@@ -65,47 +65,57 @@
     "shortDescription": "Found a Decc0 somewhere on the web? Wanna know the id or name? Here you can upload or paste any decc0 pfp - we'll identify it for you and send you right into its codex profile. ",
     "author": "Daïm Al-Yad",
     "longDescription": "Found a Decc0 somewhere on the web? Wanna know the id or name? Here you can upload or paste any decc0 pfp - we'll identify it for you and send you right into its codex profile.",
-    "img": "imgs/find.png",
+    "img": "imgs/find.jpg",
     "url": "https://find.decc0s.com",
     "type": "community"
   },
   {
     "id": 8,
+    "title": "Meme Browser",
+    "shortDescription": "Explore all memes created by the MOCA community. Copy and paste them across the interwebs. Join the Discord to contribute your own creations. ",
+    "author": "reneil1337",
+    "longDescription": "",
+    "img": "imgs/memes.jpg",
+    "url": "https://memes.decc0s.com",
+    "type": "community"
+  },
+  {
+    "id": 9,
     "title": "Decc0 Plaza",
     "shortDescription": "The most visually-diverse PFP collection in existence, on full display. Enter this bespoke Metaverse space, featuring dozens of Art DeCC0s spread throughout Untitled,xyz’s unMuseum 3D architectures.",
     "author": "Museum Of Cryto Art",
     "longDescription": "The most visually-diverse PFP collection in existence, on full display. Enter this bespoke Metaverse space, featuring dozens of Art DeCC0s spread throughout Untitled,xyz’s unMuseum 3D architectures.",
-    "img": "imgs/agora.png",
+    "img": "imgs/agora.jpg",
     "url": "https://hyperfy.io/decc0plaza/",
     "type": "metaverse"
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "MOCA Substack",
     "shortDescription": "Sign-up for industry-leading writing about crypto art, AI, the metaverse, cryptocurrency, and web3 culture, released weekly.",
     "author": "Museum Of Cryto Art",
     "longDescription": "Sign-up for industry-leading writing about crypto art, AI, the metaverse, cryptocurrency, and web3 culture, released weekly.",
-    "img": "imgs/substack.png",
+    "img": "imgs/substack.jpg",
     "url": "https://museumofcrypto.substack.com/",
     "type": "museum"
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Rooms Archive",
     "shortDescription": "Dive into dozens of MOCA ROOMs, our bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
     "author": "Museum Of Crypto Art",
     "longDescription": "Dive into dozens of MOCA ROOMs, our bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
-    "img": "imgs/rooms.png",
+    "img": "imgs/rooms.jpg",
     "url": "https://archive.museumofcryptoart.com/",
     "type": "museum"
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "Official Discord",
     "shortDescription": "Join the MOCA Discord to find fellow crypto art believers and stay up to date with the latest news around Art DeCC0s, the Vibe Studio, and more.",
     "author": "Museum Of Crypto Art",
     "longDescription": "",
-    "img": "imgs/discord.png",
+    "img": "imgs/discord.jpg",
     "url": "https://discord.gg/Rs7wxUTrWV",
     "type": "museum"
   }
