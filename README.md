@@ -91,7 +91,7 @@ The Vibe Studio represents a revolutionary approach to community-driven applicat
 
 If you have something you're building or have built, and you want to include it in the Vibe Studio:
 - Reach us on [Discord](https://discord.gg/Rs7wxUTrWV)
-- DM us on [Twitter/X](https://x.com/reneil1337)
+- DM us on [Twitter/X](https://x.com/museumofcrypto)
 - Open an issue or PR on this repository
 
 100% of proceeds within community apps go to their creators. We provide the platform and userbase; you bring the innovation.
@@ -144,19 +144,14 @@ We welcome contributions from the community! Whether you're a developer, artist,
 
 ## Learn More
 
-### About MOCA
-- [Museum of Crypto Art](https://v2.museumofcryptoart.com/)
-- [MOCA Substack](https://museumofcrypto.substack.com/)
-- [mocaOS Repository](https://github.com/mocaOS/museum)
-
 ### About Art DeCC0s
 - [The Codex](https://codex.decc0s.com/)
 - [Adoption Center](https://adopt.decc0s.com/)
 - [DeCC0 World Map](https://map.decc0s.com)
 
-### Community
+### MOCA Community
 - [Discord](https://discord.gg/Rs7wxUTrWV)
-- [Twitter/X](https://x.com/reneil1337)
+- [Twitter/X](https://x.com/museumofcrypto)
 
 ## License
 
