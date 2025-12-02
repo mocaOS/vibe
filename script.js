@@ -94,6 +94,7 @@ let appsData = [];
 let appsTypes = [];
 let activeFilters = new Set(); // Track active type filters
 let typeColorMap = {}; // Map slug to color
+let searchQuery = ''; // Track search query
 
 // Tooltip scroll management
 let activeTooltipAnimation = null;
@@ -181,8 +182,24 @@ function displayTypeFilters() {
   const countButton = document.createElement('button');
   countButton.className = 'type-filter-button count-button';
   countButton.textContent = `${appsData.length} Apps`;
-  countButton.disabled = true;
+  countButton.addEventListener('click', () => {
+    resetFilters();
+  });
   typeFilters.appendChild(countButton);
+
+  // Add search input
+  const searchInput = document.createElement('input');
+  searchInput.type = 'text';
+  searchInput.className = 'search-input';
+  searchInput.id = 'searchInput';
+  searchInput.placeholder = 'Search apps...';
+  searchInput.addEventListener('input', (e) => {
+    searchQuery = e.target.value.toLowerCase();
+    currentPage = 1;
+    displayApps(currentPage);
+    setupPagination();
+  });
+  typeFilters.appendChild(searchInput);
 
   appsTypes.forEach(type => {
     const button = document.createElement('button');
@@ -197,6 +214,32 @@ function displayTypeFilters() {
 
     typeFilters.appendChild(button);
   });
+}
+
+// Reset all filters
+function resetFilters() {
+  // Clear active filters
+  activeFilters.clear();
+
+  // Clear search query
+  searchQuery = '';
+
+  // Clear search input field
+  const searchInput = document.getElementById('searchInput');
+  if (searchInput) {
+    searchInput.value = '';
+  }
+
+  // Remove active class from all filter buttons
+  const filterButtons = document.querySelectorAll('.type-filter-button:not(.count-button)');
+  filterButtons.forEach(button => {
+    button.classList.remove('active');
+  });
+
+  // Reset to first page
+  currentPage = 1;
+  displayApps(currentPage);
+  setupPagination();
 }
 
 // Toggle filter on/off
@@ -253,12 +296,33 @@ function deactivateCurrentCard() {
   currentAnimatedCard = null;
 }
 
-// Get filtered apps based on active filters
+// Get filtered apps based on active filters and search query
 function getFilteredApps() {
-  if (activeFilters.size === 0) {
-    return appsData;
+  let filtered = appsData;
+
+  // Apply type filters
+  if (activeFilters.size > 0) {
+    filtered = filtered.filter(app => activeFilters.has(app.type));
   }
-  return appsData.filter(app => activeFilters.has(app.type));
+
+  // Apply search filter - only match words that START with the search query
+  if (searchQuery.trim() !== '') {
+    filtered = filtered.filter(app => {
+      const searchableText = [
+        app.title,
+        app.shortDescription,
+        app.longDescription,
+        app.author
+      ].join(' ').toLowerCase();
+
+      // Create regex that matches the search query at word boundaries (start of words)
+      // \b ensures we match at the beginning of a word
+      const regex = new RegExp('\\b' + searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+      return regex.test(searchableText);
+    });
+  }
+
+  return filtered;
 }
 
 // Display apps for the current page
