@@ -21,16 +21,6 @@
   },
   {
     "id": 3,
-    "title": "Codex Docs",
-    "shortDescription": "Dig the Codex documentation and start building your own apps utilizing the 100 million words of personality data in structured form and all CC0 assets around Art DeCC0s.",
-    "author": "Museum Of Crypto Art",
-    "longDescription": "",
-    "img": "imgs/docs.jpg",
-    "url": "https://docs.decc0s.com/",
-    "type": "decc0s"
-  },
-  {
-    "id": 4,
     "title": "Adoption Center",
     "shortDescription": "Interact with our Art DeCC0 Agents! Chat 1-on-1, ask questions, form genuine connections, and take your new digital best friend home, all in one place.",
     "author": "Museum Of Crypto Art",
@@ -40,13 +30,23 @@
     "type": "decc0s"
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "Decc0 Launcher",
     "shortDescription": "Build your very own Art DeCC0 AI Agents. Fine-tune knowledge-bases, extend personalities, bestow preferences, teach, and send agents on quests, all from this simple ElizaOS interface.",
     "author": "Museum Of Crypto Art",
     "longDescription": "Build your very own Art DeCC0 AI Agents. Fine-tune knowledge-bases, extend personalities, bestow preferences, teach, and send agents on quests, all from this simple ElizaOS interface.",
     "img": "imgs/launcher.jpg",
     "url": "http://v2.museumofcryptoart.com/decc0s",
+    "type": "decc0s"
+  },
+  {
+    "id": 5,
+    "title": "Codex API",
+    "shortDescription": "Dig the Codex documentation and start building your own apps utilizing the 100 million words of personality data in structured form and all CC0 assets around Art DeCC0s.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "docs",
+    "img": "imgs/docs.jpg",
+    "url": "https://docs.decc0s.com/",
     "type": "decc0s"
   },
   {
