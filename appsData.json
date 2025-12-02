@@ -111,8 +111,8 @@
   },
   {
     "id": 12,
-    "title": "The mocaOS Github",
-    "shortDescription": "Explore the open source codebases of the museum, the codex as well as a wide range of Vibe Studio apps that you can fork and customize.",
+    "title": "mocaOS Github",
+    "shortDescription": "Explore all open source codebases of the museum, the codex as well as a wide range of Vibe Studio apps that you can fork and customize.",
     "author": "Museum Of Crypto Art",
     "longDescription": "",
     "img": "imgs/github.jpg",
