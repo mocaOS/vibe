@@ -21,6 +21,16 @@
   },
   {
     "id": 3,
+    "title": "Codex Docs",
+    "shortDescription": "Dig the Codex documentation and start building your own apps utilizing the 100 million words of personality data in structured form and all CC0 assets around Art DeCC0s.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "",
+    "img": "imgs/docs.jpg",
+    "url": "https://docs.decc0s.com/",
+    "type": "decc0s"
+  },
+  {
+    "id": 4,
     "title": "Adoption Center",
     "shortDescription": "Interact with our Art DeCC0 Agents! Chat 1-on-1, ask questions, form genuine connections, and take your new digital best friend home, all in one place.",
     "author": "Museum Of Crypto Art",
@@ -30,7 +40,7 @@
     "type": "decc0s"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Decc0 Launcher",
     "shortDescription": "Build your very own Art DeCC0 AI Agents. Fine-tune knowledge-bases, extend personalities, bestow preferences, teach, and send agents on quests, all from this simple ElizaOS interface.",
     "author": "Museum Of Crypto Art",
@@ -40,7 +50,7 @@
     "type": "decc0s"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "DeCC0 Printer",
     "shortDescription": "Turn your Art DeCC0s into stunning high-resolution prints with the click of a button. Developed and operated by Artscape.",
     "author": "Tor",
@@ -50,23 +60,13 @@
     "type": "community"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Decc0 World Map",
     "shortDescription": "Every Art DeCC0 has a home. Discover them all in this interactive world map containing the hometowns and stomping grounds of all 10,000 Art DeCC0s.",
     "author": "Daïm Al-Yad",
     "longDescription": "Every Art DeCC0 has a home. Discover them all in this interactive world map containing the hometowns and stomping grounds of all 10,000 Art DeCC0s.",
     "img": "imgs/map.jpg",
     "url": "https://map.decc0s.com",
-    "type": "community"
-  },
-  {
-    "id": 7,
-    "title": "Decc0 Finder",
-    "shortDescription": "Found a Decc0 somewhere on the web? Wanna know the id or name? Here you can upload or paste any decc0 pfp - we'll identify it for you and send you right into its codex profile. ",
-    "author": "Daïm Al-Yad",
-    "longDescription": "Found a Decc0 somewhere on the web? Wanna know the id or name? Here you can upload or paste any decc0 pfp - we'll identify it for you and send you right into its codex profile.",
-    "img": "imgs/find.jpg",
-    "url": "https://find.decc0s.com",
     "type": "community"
   },
   {
@@ -84,7 +84,7 @@
     "title": "Decc0 Plaza",
     "shortDescription": "The most visually-diverse PFP collection in existence, on full display. Enter this bespoke Metaverse space, featuring dozens of Art DeCC0s spread throughout Untitled,xyz’s unMuseum 3D architectures.",
     "author": "Museum Of Cryto Art",
-    "longDescription": "The most visually-diverse PFP collection in existence, on full display. Enter this bespoke Metaverse space, featuring dozens of Art DeCC0s spread throughout Untitled,xyz’s unMuseum 3D architectures.",
+    "longDescription": "The most visually-diverse PFP collection in existence, on full display. Enter this bespoke Metaverse space, featuring dozens of Art DeCC0s spread throughout Untitled,xyz’s unMuseum 3D ROOMs architectures.",
     "img": "imgs/agora.jpg",
     "url": "https://hyperfy.io/decc0plaza/",
     "type": "metaverse"
@@ -101,22 +101,42 @@
   },
   {
     "id": 11,
-    "title": "Rooms Archive",
-    "shortDescription": "Dive into dozens of MOCA ROOMs, our bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
-    "author": "Museum Of Crypto Art",
-    "longDescription": "Dive into dozens of MOCA ROOMs, our bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
-    "img": "imgs/rooms.jpg",
-    "url": "https://archive.museumofcryptoart.com/",
-    "type": "museum"
-  },
-  {
-    "id": 12,
     "title": "Official Discord",
     "shortDescription": "Join the MOCA Discord to find fellow crypto art believers and stay up to date with the latest news around Art DeCC0s, the Vibe Studio, and more.",
     "author": "Museum Of Crypto Art",
     "longDescription": "",
     "img": "imgs/discord.jpg",
     "url": "https://discord.gg/Rs7wxUTrWV",
+    "type": "museum"
+  },
+  {
+    "id": 12,
+    "title": "The mocaOS Github",
+    "shortDescription": "Explore the open source codebases of the museum, the codex as well as a wide range of Vibe Studio apps that you can fork and customize.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "",
+    "img": "imgs/github.jpg",
+    "url": "https://github.com/mocaOS/",
+    "type": "museum"
+  },
+  {
+    "id": 13,
+    "title": "Decc0 Finder",
+    "shortDescription": "Found a Decc0 somewhere on the web? Wanna know the id or name? Here you can upload or paste any decc0 pfp - we'll identify it for you and send you right into its codex profile. ",
+    "author": "Daïm Al-Yad",
+    "longDescription": "Found a Decc0 somewhere on the web? Wanna know the id or name? Here you can upload or paste any decc0 pfp - we'll identify it for you and send you right into its codex profile.",
+    "img": "imgs/find.jpg",
+    "url": "https://find.decc0s.com",
+    "type": "community"
+  },
+  {
+    "id": 14,
+    "title": "Rooms Archive",
+    "shortDescription": "Dive into dozens of MOCA ROOMs, our bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "Dive into dozens of MOCA ROOMs, our bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
+    "img": "imgs/rooms.jpg",
+    "url": "https://archive.museumofcryptoart.com/",
     "type": "museum"
   }
 ]
