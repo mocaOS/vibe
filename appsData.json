@@ -131,12 +131,72 @@
   },
   {
     "id": 14,
+    "title": "MOCA Manifesto",
+    "shortDescription": "Our mission is to preserve the truth. A common truth is found when many voices are heard.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "",
+    "img": "imgs/manifesto.jpg",
+    "url": "https://manifest.museumofcryptoart.com/",
+    "type": "museum"
+  },
+  {
+    "id": 16,
+    "title": "MOCA Exhibitions",
+    "shortDescription": "Explore all earliest exhibitions, in the metaverse and from around the globe, curated by the Museum of Crypto Art from April 2020 to June 2022.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "",
+    "img": "imgs/exhibitions.jpg",
+    "url": "https://museumofcrypto.notion.site/M-C-Exhibitions-5bd13993fc384e83b62bc8d74b349cc2",
+    "type": "museum"
+  },
+  {
+    "id": 9995,
+    "title": "The NFTs",
+    "shortDescription": "For all you NFT enthusiasts, view the actual tokenized artworks within MOCA's Collections.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "",
+    "img": "imgs/nfts.jpg",
+    "url": "https://opensea.io/MOCA-Genesis",
+    "type": "museum"
+  },
+  {
+    "id": 9996,
+    "title": "Coingecko",
+    "shortDescription": "Your home for $moca token price-action.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "",
+    "img": "imgs/coingecko.jpg",
+    "url": "https://www.coingecko.com/en/coins/museum-of-crypto-art",
+    "type": "museum"
+  },
+  {
+    "id": 9997,
     "title": "Rooms Archive",
     "shortDescription": "Dive into dozens of MOCA ROOMs, our bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
     "author": "Museum Of Crypto Art",
     "longDescription": "Dive into dozens of MOCA ROOMs, our bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
     "img": "imgs/rooms.jpg",
     "url": "https://archive.museumofcryptoart.com/",
+    "type": "museum"
+  },
+  {
+    "id": 9998,
+    "title": "Official Website",
+    "shortDescription": "Before there was a Museum, there was this website. Journey back to our 2021 origins and see how far crypto art has come.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "",
+    "img": "imgs/website.jpg",
+    "url": "https://museumofcryptoart.com/",
+    "type": "museum"
+  },
+  {
+    "id": 9999,
+    "title": "Legacy Museum",
+    "shortDescription": "Explore our OG vision for the Museum of Crypto Art. Browse our first collections and early staking interfaces from 2021.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "",
+    "img": "imgs/legacy.jpg",
+    "url": "https://app.museumofcryptoart.com/",
     "type": "museum"
   }
 ]
