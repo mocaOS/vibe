@@ -131,6 +131,16 @@
   },
   {
     "id": 14,
+    "title": "MOCA Live",
+    "shortDescription": "Come take a (sometimes boisterous, other times blasphemous) tour around the crypto art world with the Museum of Crypto Art's founder, Colborn Bell, and lead writer, Max Cohen.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "",
+    "img": "imgs/live.jpg",
+    "url": "https://open.spotify.com/show/1Cs41U8Afgp9eUJ57wz7ma",
+    "type": "museum"
+  },
+  {
+    "id": 15,
     "title": "MOCA Manifesto",
     "shortDescription": "Our mission is to preserve the truth. A common truth is found when many voices are heard.",
     "author": "Museum Of Crypto Art",
@@ -147,6 +157,16 @@
     "longDescription": "",
     "img": "imgs/exhibitions.jpg",
     "url": "https://museumofcrypto.notion.site/M-C-Exhibitions-5bd13993fc384e83b62bc8d74b349cc2",
+    "type": "museum"
+  },
+  {
+    "id": 9994,
+    "title": "Press Room",
+    "shortDescription": "Dive into the world of MOCA by exploring the stories and insights that have shaped the Museum of Crypto Art's journey.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "",
+    "img": "imgs/press.jpg",
+    "url": "https://museumofcrypto.notion.site/Press-Room-20a4ddd487c9497abbb5daffb66d7caf",
     "type": "museum"
   },
   {

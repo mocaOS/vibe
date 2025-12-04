@@ -14,46 +14,76 @@ The Vibe Studio hosts a growing collection of applications spanning multiple cat
 
 ### 🎨 MOCA Core Applications
 
-**[The Museum](https://v2.museumofcryptoart.com/)**  
+**[The Museum](https://v2.museumofcryptoart.com/)**
 Visit the OG Museum of Crypto Art featuring five collections of cutting-edge crypto art from across time and space. Then explore The Library, our AI-powered database ready for your questions and queries about all things crypto art.
 
-**[The Codex](https://codex.decc0s.com/)**  
+**[The Codex](https://codex.decc0s.com/)**
 The beating heart of MOCA's agentic operating system. Explore all 10,000 Art DeCC0s with over 100 million words of personality data—biographies, preferences, writing styles, worldviews, and the technical scaffolding needed to bring each DeCC0 to life as an AI agent. Each DeCC0's Codex page contains 10,000+ words on average, providing the deepest bedrock layer for all agentic technology we're pioneering.
 
-**[Rooms Archive](https://archive.museumofcryptoart.com/)**  
+**[Rooms Archive](https://archive.museumofcryptoart.com/)**
 A Wayback Machine for crypto art curation. Dive into dozens of MOCA ROOMs—our bespoke 3D art galleries—and explore how curatorial taste has evolved over the years. Every ROOM's curation state is archived permanently in partnership with Filecoin.
 
-**[MOCA Substack](https://museumofcrypto.substack.com/)**  
+**[MOCA Substack](https://museumofcrypto.substack.com/)**
 Industry-leading writing about crypto art, AI, the metaverse, cryptocurrency, and web3 culture, released weekly. Years of insights, cultural analysis, and technical explorations from artists and the MOCA team.
+
+**[MOCA Live](https://open.spotify.com/show/1Cs41U8Afgp9eUJ57wz7ma)**
+Come take a (sometimes boisterous, other times blasphemous) tour around the crypto art world with the Museum of Crypto Art's founder, Colborn Bell, and lead writer, Max Cohen.
+
+**[MOCA Manifesto](https://manifest.museumofcryptoart.com/)**
+Our mission is to preserve the truth. A common truth is found when many voices are heard.
+
+**[MOCA Exhibitions](https://museumofcrypto.notion.site/M-C-Exhibitions-5bd13993fc384e83b62bc8d74b349cc2)**
+Explore all earliest exhibitions, in the metaverse and from around the globe, curated by the Museum of Crypto Art from April 2020 to June 2022.
+
+**[Press Room](https://museumofcrypto.notion.site/Press-Room-20a4ddd487c9497abbb5daffb66d7caf)**
+Dive into the world of MOCA by exploring the stories and insights that have shaped the Museum of Crypto Art's journey.
+
+**[The NFTs](https://opensea.io/MOCA-Genesis)**
+For all you NFT enthusiasts, view the actual tokenized artworks within MOCA's Collections.
+
+**[Coingecko](https://www.coingecko.com/en/coins/museum-of-crypto-art)**
+Your home for $moca token price-action.
+
+**[Official Website](https://museumofcryptoart.com/)**
+Before there was a Museum, there was this website. Journey back to our 2021 origins and see how far crypto art has come.
+
+**[Legacy Museum](https://app.museumofcryptoart.com/)**
+Explore our OG vision for the Museum of Crypto Art. Browse our first collections and early staking interfaces from 2021.
+
+**[mocaOS Github](https://github.com/mocaOS/)**
+Explore all open source codebases of the museum, the codex as well as a wide range of Vibe Studio apps that you can fork and customize.
 
 ### 🤖 Art DeCC0s Agentic Ecosystem
 
-**[Adoption Center](https://adopt.decc0s.com/)**  
+**[Adoption Center](https://adopt.decc0s.com/)**
 Find your perfect digital companion. Chat 1-on-1 with a rotating cast of Art DeCC0s (initially those listed at floor price), discover their unique personalities, form genuine connections, and when you've found the right match, take your new best friend home. It's a testing ground for agentic conversation where you can explore the varied personalities within the Art DeCC0s collection.
 
-**[DeCC0 Agent Launcher](http://v2.museumofcryptoart.com/decc0s)**  
+**[DeCC0 Agent Launcher](http://v2.museumofcryptoart.com/decc0s)**
 Your hub for fine-tuning DeCC0 agents into actionable entities. Built on ElizaOS, this is where you teach your DeCC0s, expand their datasets, make them experts in any areas you like, and eventually set them loose on tasks. If The Codex is each DeCC0's nature, the Agent Launcher is the place of nurture.
+
+**[Codex API](https://docs.decc0s.com/)**
+Dig the Codex documentation and start building your own apps utilizing the 100 million words of personality data in structured form and all CC0 assets around Art DeCC0s.
 
 ### 🌍 Community Applications
 
-**[DeCC0 World Map](https://map.decc0s.com)** by Daïm Al-Yad  
+**[DeCC0 World Map](https://map.decc0s.com)** by Daïm Al-Yad
 An interactive globe visualizing the hometowns and present locations of all 10,000 Art DeCC0s. Find what DeCC0s live nearest to you, collect a DeCC0 from every continent, or explore the intricate connections between our world and the encyclopedic lore we built for Art DeCC0s.
 
-**[DeCC0 Finder](https://find.decc0s.com)** by Daïm Al-Yad  
+**[DeCC0 Finder](https://find.decc0s.com)** by Daïm Al-Yad
 Found a DeCC0 somewhere on the web? Upload or paste any DeCC0 pfp and we'll identify it for you, sending you straight to its Codex profile.
 
-**[DeCC0 Printer](https://artscapeprint.com/moca)** by Artscape  
+**[DeCC0 Printer](https://artscapeprint.com/moca)** by Artscape
 Turn your Art DeCC0s into stunning high-resolution prints. Connect your wallet, choose which DeCC0 to print, select paper type and size, and your print will be produced and shipped from the nearest print hub to your location. 100% of proceeds go to the Artscape team.
 
-**[Meme Studio](https://memes.decc0s.com)** by reneil1337  
+**[Meme Studio](https://memes.decc0s.com)** by reneil1337
 Explore all memes created by the MOCA community. Copy and paste them across the interwebs. Join the Discord to contribute your own creations.
 
 ### 🌐 Metaverse & Social
 
-**[DeCC0 Plaza](https://hyperfy.io/decc0plaza/)**  
+**[DeCC0 Plaza](https://hyperfy.io/decc0plaza/)**
 The most visually-diverse PFP collection in existence, on full display. Enter this bespoke Metaverse space featuring dozens of Art DeCC0s spread throughout Untitled.xyz's unMuseum 3D architectures.
 
-**[Official Discord](https://discord.gg/Rs7wxUTrWV)**  
+**[Official Discord](https://discord.gg/Rs7wxUTrWV)**
 Join the MOCA Discord to find fellow crypto art believers and stay up to date with the latest news around Art DeCC0s, the Vibe Studio, and more.
 
 ## The Technology Behind It
@@ -146,12 +176,15 @@ We welcome contributions from the community! Whether you're a developer, artist,
 
 ### About Art DeCC0s
 - [The Codex](https://codex.decc0s.com/)
+- [Codex API](https://docs.decc0s.com/)
 - [Adoption Center](https://adopt.decc0s.com/)
 - [DeCC0 World Map](https://map.decc0s.com)
 
 ### MOCA Community
 - [Discord](https://discord.gg/Rs7wxUTrWV)
 - [Twitter/X](https://x.com/museumofcrypto)
+- [MOCA Live Podcast](https://open.spotify.com/show/1Cs41U8Afgp9eUJ57wz7ma)
+- [Substack](https://museumofcrypto.substack.com/)
 
 ## License
 
