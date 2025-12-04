@@ -14,19 +14,24 @@ const MIME_TYPES = {
   '.jpg': 'image/jpeg',
   '.gif': 'image/gif',
   '.svg': 'image/svg+xml',
-  '.ico': 'image/x-icon'
+  '.ico': 'image/x-icon',
+  '.ttf': 'font/ttf',
+  '.woff': 'font/woff',
+  '.woff2': 'font/woff2',
+  '.eot': 'application/vnd.ms-fontobject'
 };
 
 const server = http.createServer((req, res) => {
   console.log(`Request received: ${req.method} ${req.url}`);
-  
-  // Handle the root path
-  let filePath = req.url === '/' ? '/index.html' : req.url;
+
+  // Handle the root path and strip query strings
+  let urlPath = req.url.split('?')[0]; // Remove query string
+  let filePath = urlPath === '/' ? '/index.html' : urlPath;
   filePath = path.join(process.cwd(), filePath);
-  
+
   const extname = String(path.extname(filePath)).toLowerCase();
   const contentType = MIME_TYPES[extname] || 'application/octet-stream';
-  
+
   fs.readFile(filePath, (error, content) => {
     if (error) {
       if (error.code === 'ENOENT') {
