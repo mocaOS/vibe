@@ -50,7 +50,17 @@
     "type": "decc0s"
   },
   {
-    "id": 6,
+    "id": 9,
+    "title": "Meme Generator",
+    "shortDescription": "Generate art decc0s memes using community curated templates. Join the Discord to share your creations or contribute to the templates. ",
+    "author": "Museum Of Cryto Art",
+    "longDescription": "",
+    "img": "imgs/memegen.jpg",
+    "url": "https://memegen.decc0s.com",
+    "type": "decc0s"
+  },
+  {
+    "id": 7,
     "title": "DeCC0 Printer",
     "shortDescription": "Turn your Art DeCC0s into stunning high-resolution prints with the click of a button. Developed and operated by Artscape.",
     "author": "Tor",
@@ -60,7 +70,7 @@
     "type": "community"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Decc0 World Map",
     "shortDescription": "Every Art DeCC0 has a home. Discover them all in this interactive world map containing the hometowns and stomping grounds of all 10,000 Art DeCC0s.",
     "author": "Daïm Al-Yad",
@@ -70,7 +80,7 @@
     "type": "community"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Meme Studio",
     "shortDescription": "Explore all memes created by the MOCA community. Copy and paste them across the interwebs. Join the Discord to contribute your own creations. ",
     "author": "reneil1337",
@@ -80,7 +90,7 @@
     "type": "community"
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Decc0 Plaza",
     "shortDescription": "The most visually-diverse PFP collection in existence, on full display. Enter this bespoke Metaverse space, featuring dozens of Art DeCC0s spread throughout Untitled,xyz’s unMuseum 3D architectures.",
     "author": "Museum Of Cryto Art",
@@ -90,7 +100,7 @@
     "type": "metaverse"
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "MOCA Substack",
     "shortDescription": "Sign-up for industry-leading writing about crypto art, AI, the metaverse, cryptocurrency, and web3 culture, released weekly.",
     "author": "Museum Of Cryto Art",
@@ -100,7 +110,7 @@
     "type": "museum"
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "Official Discord",
     "shortDescription": "Join the MOCA Discord to find fellow crypto art believers and stay up to date with the latest news around Art DeCC0s, the Vibe Studio, and more.",
     "author": "Museum Of Crypto Art",
@@ -110,7 +120,7 @@
     "type": "museum"
   },
   {
-    "id": 12,
+    "id": 13,
     "title": "mocaOS Github",
     "shortDescription": "Explore all open source codebases of the museum, the codex as well as a wide range of Vibe Studio apps that you can fork and customize.",
     "author": "Museum Of Crypto Art",
@@ -120,7 +130,7 @@
     "type": "museum"
   },
   {
-    "id": 13,
+    "id": 14,
     "title": "Decc0 Finder",
     "shortDescription": "Found a Decc0 somewhere on the web? Wanna know the id or name? Here you can upload or paste any decc0 pfp - we'll identify it for you and send you right into its codex profile. ",
     "author": "Daïm Al-Yad",
@@ -130,7 +140,7 @@
     "type": "community"
   },
   {
-    "id": 14,
+    "id": 15,
     "title": "MOCA Live",
     "shortDescription": "Come take a (sometimes boisterous, other times blasphemous) tour around the crypto art world with the Museum of Crypto Art's founder, Colborn Bell, and lead writer, Max Cohen.",
     "author": "Museum Of Crypto Art",
@@ -140,7 +150,7 @@
     "type": "museum"
   },
   {
-    "id": 15,
+    "id": 16,
     "title": "MOCA Manifesto",
     "shortDescription": "Our mission is to preserve the truth. A common truth is found when many voices are heard.",
     "author": "Museum Of Crypto Art",
@@ -150,7 +160,7 @@
     "type": "museum"
   },
   {
-    "id": 16,
+    "id": 17,
     "title": "MOCA Exhibitions",
     "shortDescription": "Explore all earliest exhibitions, in the metaverse and from around the globe, curated by the Museum of Crypto Art from April 2020 to June 2022.",
     "author": "Museum Of Crypto Art",
