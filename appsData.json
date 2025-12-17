@@ -51,6 +51,16 @@
   },
   {
     "id": 6,
+    "title": "DeCC0 Wisdom",
+    "shortDescription": "Wonder precedes understanding, and every DeCC0 is a philosopher.  Drink from wells of global wisdom, or ask your DeCC0's take on a question of your own.",
+    "author": "Daïm Al-Yad",
+    "longDescription": "",
+    "img": "imgs/wisdom.jpg",
+    "url": "https://wisdom.decc0s.com",
+    "type": "decc0s"
+  },
+  {
+    "id": 7,
     "title": "Meme Generator",
     "shortDescription": "Generate art decc0s memes using community curated templates. Join the Discord to share your creations or contribute to the templates. ",
     "author": "Museum Of Cryto Art",
@@ -60,23 +70,13 @@
     "type": "decc0s"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "DeCC0 Printer",
     "shortDescription": "Turn your Art DeCC0s into stunning high-resolution prints with the click of a button. Developed and operated by Artscape.",
     "author": "Tor",
     "longDescription": "Our first Community App, developed and operated by Artscape, lets Art DeCC0 holders print any DeCC0 from their collection in stunning high-resolution. Simply connect your wallet holding an Art DeCC0, choose which you want to print, select paper type and size,  and your print will be produced and shipped from the nearest print hub to your location. About Artscape: Artscape provides high-quality fine art prints through token-gating. This enables artists, communities, and galleries to offer collectors authenticated physical versions of their digital artworks — including limited editions and signed originals.",
     "img": "imgs/print.jpg",
     "url": "https://artscapeprint.com/moca",
-    "type": "community"
-  },
-  {
-    "id": 8,
-    "title": "DeCC0 Wisdom",
-    "shortDescription": "Wonder precedes understanding, and every DeCC0 is a philosopher.  Drink from wells of global wisdom, or ask your DeCC0's take on a question of your own.",
-    "author": "Daïm Al-Yad",
-    "longDescription": "",
-    "img": "imgs/wisdom.jpg",
-    "url": "https://wisdom.decc0s.com",
     "type": "community"
   },
   {
