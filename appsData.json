@@ -21,6 +21,16 @@
   },
   {
     "id": 3,
+    "title": "DeCC0 Wisdom",
+    "shortDescription": "Wonder precedes understanding, and every DeCC0 is a philosopher.  Drink from wells of global wisdom, or ask your DeCC0's take on a question of your own.",
+    "author": "Daïm Al-Yad",
+    "longDescription": "",
+    "img": "imgs/wisdom.jpg",
+    "url": "https://wisdom.decc0s.com",
+    "type": "decc0s"
+  },
+  {
+    "id": 4,
     "title": "Adoption Center",
     "shortDescription": "Interact with our Art DeCC0 Agents! Chat 1-on-1, ask questions, form genuine connections, and take your new digital best friend home, all in one place.",
     "author": "Museum Of Crypto Art",
@@ -30,7 +40,7 @@
     "type": "decc0s"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Decc0 Launcher",
     "shortDescription": "Build your very own Art DeCC0 AI Agents. Fine-tune knowledge-bases, extend personalities, bestow preferences, teach, and send agents on quests, all from this simple ElizaOS interface.",
     "author": "Museum Of Crypto Art",
@@ -40,23 +50,13 @@
     "type": "decc0s"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Codex API",
     "shortDescription": "Dig the Codex documentation and start building your own apps utilizing the 100 million words of personality data in structured form and all CC0 assets around Art DeCC0s.",
     "author": "Museum Of Crypto Art",
     "longDescription": "docs",
     "img": "imgs/docs.jpg",
     "url": "https://docs.decc0s.com/",
-    "type": "decc0s"
-  },
-  {
-    "id": 6,
-    "title": "DeCC0 Wisdom",
-    "shortDescription": "Wonder precedes understanding, and every DeCC0 is a philosopher.  Drink from wells of global wisdom, or ask your DeCC0's take on a question of your own.",
-    "author": "Daïm Al-Yad",
-    "longDescription": "",
-    "img": "imgs/wisdom.jpg",
-    "url": "https://wisdom.decc0s.com",
     "type": "decc0s"
   },
   {
