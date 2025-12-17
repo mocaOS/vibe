@@ -50,7 +50,7 @@
     "type": "decc0s"
   },
   {
-    "id": 9,
+    "id": 6,
     "title": "Meme Generator",
     "shortDescription": "Generate art decc0s memes using community curated templates. Join the Discord to share your creations or contribute to the templates. ",
     "author": "Museum Of Cryto Art",
@@ -71,22 +71,22 @@
   },
   {
     "id": 8,
+    "title": "DeCC0 Wisdom",
+    "shortDescription": "Wonder precedes understanding, and every DeCC0 is a philosopher.  Drink from wells of global wisdom, or ask your DeCC0's take on a question of your own.",
+    "author": "Daïm Al-Yad",
+    "longDescription": "",
+    "img": "imgs/wisdom.jpg",
+    "url": "https://wisdom.decc0s.com",
+    "type": "community"
+  },
+  {
+    "id": 9,
     "title": "Decc0 World Map",
     "shortDescription": "Every Art DeCC0 has a home. Discover them all in this interactive world map containing the hometowns and stomping grounds of all 10,000 Art DeCC0s.",
     "author": "Daïm Al-Yad",
     "longDescription": "Every Art DeCC0 has a home. Discover them all in this interactive world map containing the hometowns and stomping grounds of all 10,000 Art DeCC0s.",
     "img": "imgs/map.jpg",
     "url": "https://map.decc0s.com",
-    "type": "community"
-  },
-  {
-    "id": 9,
-    "title": "Meme Studio",
-    "shortDescription": "Explore all memes created by the MOCA community. Copy and paste them across the interwebs. Join the Discord to contribute your own creations. ",
-    "author": "reneil1337",
-    "longDescription": "",
-    "img": "imgs/memes.jpg",
-    "url": "https://memes.decc0s.com",
     "type": "community"
   },
   {
@@ -121,13 +121,13 @@
   },
   {
     "id": 13,
-    "title": "mocaOS Github",
-    "shortDescription": "Explore all open source codebases of the museum, the codex as well as a wide range of Vibe Studio apps that you can fork and customize.",
-    "author": "Museum Of Crypto Art",
+    "title": "Meme Studio",
+    "shortDescription": "Explore all memes created by the MOCA community. Copy and paste them across the interwebs. Join the Discord to contribute your own creations. ",
+    "author": "reneil1337",
     "longDescription": "",
-    "img": "imgs/github.jpg",
-    "url": "https://github.com/mocaOS/",
-    "type": "museum"
+    "img": "imgs/memes.jpg",
+    "url": "https://memes.decc0s.com",
+    "type": "community"
   },
   {
     "id": 14,
@@ -141,6 +141,16 @@
   },
   {
     "id": 15,
+    "title": "mocaOS Github",
+    "shortDescription": "Explore all open source codebases of the museum, the codex as well as a wide range of Vibe Studio apps that you can fork and customize.",
+    "author": "Museum Of Crypto Art",
+    "longDescription": "",
+    "img": "imgs/github.jpg",
+    "url": "https://github.com/mocaOS/",
+    "type": "museum"
+  },
+  {
+    "id": 16,
     "title": "MOCA Live",
     "shortDescription": "Come take a (sometimes boisterous, other times blasphemous) tour around the crypto art world with the Museum of Crypto Art's founder, Colborn Bell, and lead writer, Max Cohen.",
     "author": "Museum Of Crypto Art",
@@ -150,7 +160,7 @@
     "type": "museum"
   },
   {
-    "id": 16,
+    "id": 17,
     "title": "MOCA Manifesto",
     "shortDescription": "Our mission is to preserve the truth. A common truth is found when many voices are heard.",
     "author": "Museum Of Crypto Art",
@@ -160,7 +170,7 @@
     "type": "museum"
   },
   {
-    "id": 17,
+    "id": 18,
     "title": "MOCA Exhibitions",
     "shortDescription": "Explore all earliest exhibitions, in the metaverse and from around the globe, curated by the Museum of Crypto Art from April 2020 to June 2022.",
     "author": "Museum Of Crypto Art",
