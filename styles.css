@@ -551,6 +551,39 @@ body {
   font-size: 1.4rem;
 }
 
+/* Discord Top Right Link */
+.discord-link {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.discord-link a {
+  color: var(--text-tertiary);
+  font-size: 1.42069rem;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.discord-link a:hover {
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+/* Responsive for Discord */
+@media (max-width: 768px) {
+  .discord-link {
+    top: 15px;
+    right: 15px;
+  }
+  
+  .discord-link a {
+    font-size: 1.25rem;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .app-store {
