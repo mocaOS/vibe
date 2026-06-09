@@ -40,16 +40,6 @@
     "type": "decc0s"
   },
   {
-    "id": 15,
-    "title": "Decc0 Launcher",
-    "shortDescription": "Build your very own Art DeCC0 AI Agents. Fine-tune knowledge-bases, extend personalities, bestow preferences, teach, and send agents on quests, all from this simple ElizaOS interface.",
-    "author": "Museum Of Crypto Art",
-    "longDescription": "Build your very own Art DeCC0 AI Agents. Fine-tune knowledge-bases, extend personalities, bestow preferences, teach, and send agents on quests, all from this simple ElizaOS interface.",
-    "img": "imgs/launcher.jpg",
-    "url": "http://v2.museumofcryptoart.com/decc0s",
-    "type": "decc0s"
-  },
-  {
     "id": 17,
     "title": "Codex API",
     "shortDescription": "Dig the Codex documentation and start building your own apps utilizing the 100 million words of personality data in structured form and all CC0 assets around Art DeCC0s.",

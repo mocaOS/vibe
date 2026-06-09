@@ -55,9 +55,6 @@ Explore all open source codebases of the museum, the codex as well as a wide ran
 **[Adoption Center](https://adopt.decc0s.com/)**
 Find your perfect digital companion. Chat 1-on-1 with a rotating cast of Art DeCC0s (initially those listed at floor price), discover their unique personalities, form genuine connections, and when you've found the right match, take your new best friend home. It's a testing ground for agentic conversation where you can explore the varied personalities within the Art DeCC0s collection.
 
-**[DeCC0 Agent Launcher](http://v2.museumofcryptoart.com/decc0s)**
-Your hub for fine-tuning DeCC0 agents into actionable entities. Built on ElizaOS, this is where you teach your DeCC0s, expand their datasets, make them experts in any areas you like, and eventually set them loose on tasks. If The Codex is each DeCC0's nature, the Agent Launcher is the place of nurture.
-
 **[Codex API](https://docs.decc0s.com/)**
 Dig the Codex documentation and start building your own apps utilizing the 100 million words of personality data in structured form and all CC0 assets around Art DeCC0s.
 
