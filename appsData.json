@@ -6,7 +6,7 @@
     "author": "Museum Of Crypto Art",
     "longDescription": "Visit the OG Museum of Crypto Art: five collections of cutting-edge crypto art from across time and space. Then, bring your questions and queries to The Library, our AI-powered database of all things crypto art.",
     "img": "imgs/museum.jpg",
-    "url": "https://v2.museumofcryptoart.com/",
+    "url": "https://museumofcryptoart.com/",
     "type": "museum"
   },
   {
@@ -227,16 +227,6 @@
     "longDescription": "Dive into dozens of MOCA ROOMs, our bespoke 3D art galleries. Explore mind-blowing metaverse environments, and interrogate curatorial taste through the years.",
     "img": "imgs/rooms.jpg",
     "url": "https://archive.museumofcryptoart.com/",
-    "type": "museum"
-  },
-  {
-    "id": 9998,
-    "title": "Legacy Website",
-    "shortDescription": "Before there was a Museum, there was this website. Journey back to our 2021 origins and see how far crypto art has come.",
-    "author": "Museum Of Crypto Art",
-    "longDescription": "",
-    "img": "imgs/website.jpg",
-    "url": "https://museumofcryptoart.com/",
     "type": "museum"
   },
   {

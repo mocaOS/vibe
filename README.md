@@ -14,7 +14,7 @@ The Vibe Studio hosts a growing collection of applications spanning multiple cat
 
 ### 🎨 MOCA Core Applications
 
-**[The Museum](https://v2.museumofcryptoart.com/)**
+**[The Museum](https://museumofcryptoart.com/)**
 Visit the OG Museum of Crypto Art featuring five collections of cutting-edge crypto art from across time and space. Then explore The Library, our AI-powered database ready for your questions and queries about all things crypto art.
 
 **[The Codex](https://codex.decc0s.com/)**
@@ -43,9 +43,6 @@ For all you NFT enthusiasts, view the actual tokenized artworks within MOCA's Co
 
 **[Coingecko](https://www.coingecko.com/en/coins/museum-of-crypto-art)**
 Your home for $moca token price-action.
-
-**[Official Website](https://museumofcryptoart.com/)**
-Before there was a Museum, there was this website. Journey back to our 2021 origins and see how far crypto art has come.
 
 **[Legacy Museum](https://app.museumofcryptoart.com/)**
 Explore our OG vision for the Museum of Crypto Art. Browse our first collections and early staking interfaces from 2021.
