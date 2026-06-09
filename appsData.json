@@ -20,26 +20,6 @@
     "type": "decc0s"
   },
   {
-    "id": 5,
-    "title": "DECC0 VOID",
-    "shortDescription": "DeCC0s in the Void is a 10,000 level chill, lo-fi, art focused, experiential brick breaker game pulsing with Art DeCC0 soul.",
-    "author": "Daïm Al-Yad",
-    "longDescription": "",
-    "img": "imgs/void.jpg",
-    "url": "https://void.decc0s.com/",
-    "type": "decc0s"
-  },
-  {
-    "id": 7,
-    "title": "DeCC0 Wisdom",
-    "shortDescription": "Wonder precedes understanding, and every DeCC0 is a philosopher.  Drink from wells of global wisdom, or ask your DeCC0's take on a question of your own.",
-    "author": "Daïm Al-Yad",
-    "longDescription": "",
-    "img": "imgs/wisdom.jpg",
-    "url": "https://wisdom.decc0s.com",
-    "type": "decc0s"
-  },
-  {
     "id": 10,
     "title": "Meme Generator",
     "shortDescription": "Generate art decc0s memes using community curated templates. Join the Discord to share your creations or contribute to the templates. ",
@@ -78,6 +58,26 @@
     "img": "imgs/docs.jpg",
     "url": "https://docs.decc0s.com/",
     "type": "decc0s"
+  },
+  {
+    "id": 5,
+    "title": "DECC0 VOID",
+    "shortDescription": "DeCC0s in the Void is a 10,000 level chill, lo-fi, art focused, experiential brick breaker game pulsing with Art DeCC0 soul.",
+    "author": "Daïm Al-Yad",
+    "longDescription": "",
+    "img": "imgs/void.jpg",
+    "url": "https://void.decc0s.com/",
+    "type": "community"
+  },
+  {
+    "id": 7,
+    "title": "DeCC0 Wisdom",
+    "shortDescription": "Wonder precedes understanding, and every DeCC0 is a philosopher.  Drink from wells of global wisdom, or ask your DeCC0's take on a question of your own.",
+    "author": "Daïm Al-Yad",
+    "longDescription": "",
+    "img": "imgs/wisdom.jpg",
+    "url": "https://wisdom.decc0s.com",
+    "type": "community"
   },
   {
     "id": 21,
