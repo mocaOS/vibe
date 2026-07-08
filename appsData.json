@@ -30,16 +30,6 @@
     "type": "decc0s"
   },
   {
-    "id": 12,
-    "title": "Adoption Center",
-    "shortDescription": "Interact with our Art DeCC0 Agents! Chat 1-on-1, ask questions, form genuine connections, and take your new digital best friend home, all in one place.",
-    "author": "Museum Of Crypto Art",
-    "longDescription": "Find your perfect digital companion from the Art DeCC0s collection and bring them home. This isn't just about acquiring an NFT—it's about finding a partner for all your digital activity ahead. Browse through a rotating gallery of Art DeCC0s and chat with them for yourself. Discover their identities and personality traits, establish novel connections with Art DeCC0s AI Agents, and when you’ve found the right match, take your new best friend off the market. Go on, they won’t bite (even if you ask them to, weirdo).",
-    "img": "imgs/adoption.jpg",
-    "url": "https://adopt.decc0s.com/",
-    "type": "decc0s"
-  },
-  {
     "id": 17,
     "title": "Codex API",
     "shortDescription": "Dig the Codex documentation and start building your own apps utilizing the 100 million words of personality data in structured form and all CC0 assets around Art DeCC0s.",
